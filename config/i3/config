@@ -10,7 +10,7 @@ exec --no-startup-id nm-applet
 # https://wiki.archlinux.org/index.php/XDG_Autostarr
 exec --no-startup-id dex --autostart --environment i3
 
-bindsym F6 exec --no-startup-id "autorandr --change"
+bindsym F6 exec --no-startup-id "autorandr --change && zsh ~/.dotfiles/scripts/background.zsh"
 bindsym F8 exec --no-startup-id "zsh ~/.dotfiles/scripts/layout.sh && zsh ~/.dotfiles/scripts/remap.sh"
 
 
@@ -77,13 +77,13 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-workspace "1 &#xf120;" output HDMI-1 eDP-1 primary
-workspace "2 &#xf269;" output eDP-1 HDMI-1 primary
+#workspace "1 &#xf120;" output HDMI-1 eDP-1 primary
+#workspace "2 &#xf269;" output eDP-1 HDMI-1 primary
 
 assign [class="firefox" instance="Navigator"] → $ws2
 assign [class="Alacritty" instance="Alacritty"] → $ws1
 
-for_window [class="Alacritty"] fullscreen enable
+#for_window [class="Alacritty"] fullscreen enable
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
