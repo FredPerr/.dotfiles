@@ -1,0 +1,3 @@
+remove Lock = Caps_Lock
+keycode 0x66 = Escape
+add Escape = Caps_Lock
