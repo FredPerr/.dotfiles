@@ -1,5 +1,5 @@
-alias code="sh ~/scripts/code.sh" # ide too ?
-alias ide="sh ~/scripts/code.sh" # ide too ?
+alias code="sh ~/.dotfiles/scripts/code.sh" # ide too ?
+alias ide="sh ~/.dotfiles/scripts/code.sh" # ide too ?
 
 alias monitors="sh ~/scripts/monitors.sh" # mon too ?
 

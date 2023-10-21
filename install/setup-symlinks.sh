@@ -8,7 +8,7 @@ ln -sf ~/.dotfiles/config/.bashrc ~/.bashrc
 ln -sf ~/.dotfiles/config/.zshrc ~/.zshrc
 ln -sf ~/.dotfiles/config/.zsh_functions ~/.zsh_functions
 
-ln -sf ~/.dotfiles/config/.Xmodmap ~/.Xmodmap
+sudo -u $SUDO_USER ln -sf ~/.dotfiles/config/.Xmodmap ~/.Xmodmap
 
 ln -sf ~/.dotfiles/config/.gitconfig ~/.gitconfig
 
