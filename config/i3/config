@@ -13,7 +13,6 @@ exec --no-startup-id dex --autostart --environment i3
 bindsym F6 exec --no-startup-id "autorandr --change && zsh ~/.dotfiles/scripts/background.zsh"
 bindsym F8 exec --no-startup-id "zsh ~/.dotfiles/scripts/layout.sh && zsh ~/.dotfiles/scripts/remap.sh"
 
-
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
@@ -169,8 +168,8 @@ exec_always picom --transparent-clipping --experimental-backends
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available
 bar {
-    output eDP-1
+    #output eDP-1
     status_command i3status --config ~/.config/i3/status
     font pango:DejaVu Sans Mono, FontAwesome 12
-    tray_output eDP-1
+    #tray_output eDP-1
 }

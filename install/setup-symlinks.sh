@@ -25,8 +25,6 @@ ln -sf ~/.dotfiles/config/tmux ~/.config/tmux
 ln -sf ~/.dotfiles/config/autorandr ~/.config/autorandr
 ln -sf ~/.dotfiles/config/monitors.xml ~/.config/monitors.xml
 
-#ln -sf ~/.dotfiles/config/udev-rules/95-hdmi-plug.rules /etc/udev/rules.d/95-hdmi-plug.rules
-#sudo ln -sf ~/.dotfiles/config/40-libinput.conf /usr/share/X11/xorg.conf.d/40-libinput.conf
-#sudo ln -sf ~/.dotfiles/config/keycodes /usr/share/X11/xkb/keycodes/evdev
+sudo ln -sf ~/.dotfiles/config/40-libinput.conf /usr/share/X11/xorg.conf.d/40-libinput.conf
 
 echo "Setup symlinks successfully!"
