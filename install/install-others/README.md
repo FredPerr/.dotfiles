@@ -5,3 +5,9 @@
 Put the installation/configuration commands inside those file.
 
 _There should be one file per package/target._
+
+There are also various other softwares to be installed (optionnally):
+
+- Rider (JetBrains)
+- Android Studio (JetBrains)
+- Unity

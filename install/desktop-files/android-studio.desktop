@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Android Studio
+Comment=IDE for Android Apps
+Exec=/home/fredperr/Apps/android-studio/bin/studio.sh
+Icon=/home/fredperr/Apps/android-studio/bin/studio.svg
+Categories=Education;
+MimeType=text/x-digital;
+Terminal=false
+Keywords=ide;mobile;android;
