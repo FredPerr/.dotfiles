@@ -8,6 +8,11 @@ fi
 
 HOME="/home/${SUDO_USER}"
 DOTFILES="${HOME}/.dotfiles"
+LOCAL_APPS="${HOME}/apps"
+
+
+mkdir -p "${HOME}/apps"
+
 
 if [ ! -f "${DOTFILES}/install/pkg-list" ]; then
     echo "${DOTFILES}/install/pkg-list file does not exist."
@@ -69,6 +74,8 @@ else
     echo "Could not find the ${SCRIPTS_EVENTS} directory."
 fi
 
+
+sudo -u $SUDO_USER chsh -s $(which zsh)
 
 
 # Setup the symlinks

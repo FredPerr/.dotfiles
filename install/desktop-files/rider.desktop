@@ -2,8 +2,8 @@
 Type=Application
 Name=Rider
 Comment=IDE for CSharp
-Exec=/home/fredperr/Apps/Rider/bin/rider.sh
-Icon=/home/fredperr/Apps/Rider/bin/rider.svg
+Exec=/home/fredperr/apps/Rider/bin/rider.sh
+Icon=/home/fredperr/apps/Rider/bin/rider.svg
 Categories=Education;
 MimeType=text/x-digital;
 Terminal=false
