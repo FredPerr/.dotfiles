@@ -1,6 +1,10 @@
 export VISUAL='nvim'
-export PATH=$PATH:/home/fredperr/Apps/watchman/bin
-export ANDROID_HOME=/home/fredperr/Apps/Unity/Hub/Editor/2022.3.11f1/Editor/Data/PlaybackEngines/AndroidPlayer/SDK
+export JAVA_HOME="/home/fredperr/apps/Unity/2022.3.12f1/Editor/Data/PlaybackEngines/AndroidPlayer/OpenJDK"
+export ANDROID_HOME="/home/fredperr/apps/Unity/2022.3.12f1/Editor/Data/PlaybackEngines/AndroidPlayer/SDK"
+export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/6.0/bin
+export PATH=$PATH:/home/fredperr/.npm-global/bin
+export PATH=$PATH:/home/fredperr/apps/watchman/bin
 . "$HOME/.cargo/env"

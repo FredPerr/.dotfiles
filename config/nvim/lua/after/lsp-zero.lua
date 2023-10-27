@@ -46,7 +46,8 @@ require('mason-lspconfig').setup({
     ensure_installed = {
         'lua_ls', 'rust_analyzer', 'bashls', 'diagnosticls',
         'eslint', 'pylsp', 'tsserver', 'vimls',
-        'yamlls', 'jsonls'
+        'yamlls', 'jsonls', 'prettier', 'autopep8', 'firefox-debug-adapter', 'css-lsp', 'tailwindcss-language-server',
+        'jedi-language-server', 'html-lsp'
     },
     handlers = {
         lsp_zero.default_setup,
