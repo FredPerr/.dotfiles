@@ -112,4 +112,4 @@ esac
 # pnpm end
 
 export EDITOR='nvim'
-export VISUAL='nvim'
+
