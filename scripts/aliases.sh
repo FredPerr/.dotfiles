@@ -1,4 +1,3 @@
-alias code="zsh ~/.dotfiles/scripts/code.sh" # ide too ?
 alias ide="zsh ~/.dotfiles/scripts/code.sh" # ide too ?
 
 alias monitors="sh ~/scripts/monitors.sh" # mon too ?
@@ -7,4 +6,16 @@ alias python="python3"
 alias py="python3" 
 
 alias jpg-to-bg="zsh ~/.dotfiles/scripts/convert-jpg-to-background.sh"
+
+# User shortcuts
+alias ghcs="gh copilot suggest"
+alias ghce="gh copilot explain"
+
+alias dotfiles="cd ~/.dotfiles && nvim ~/.dotfiles/"
+alias projects="cd ~/Projects/"
+alias downloads="cd ~/Downloads/"
+
+alias vi="nvim"
+alias vim="nvim"
+
 
