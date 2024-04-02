@@ -14,7 +14,7 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Cancel <leader>f
-vim.keymap.set("n", "<leader>f", '<nop>')
+vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end)
 
 -- Make the file executable (not silent)
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = false })
