@@ -30,3 +30,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Local and remote default editor
 export EDITOR='nvim'
+
+# Go
+export GOPATH="$HOME/go/"
+export GOBIN="$HOME/go/bin/"
+export PATH="$PATH:/usr/local/go/bin"
