@@ -8,7 +8,7 @@ alias py="python3"
 alias jpg-to-bg="zsh ~/.dotfiles/scripts/convert-jpg-to-background.sh"
 
 # User shortcuts
-alias ghcs="gh copilot suggest"
+alias ghcs="gh copilot suggest -s"
 alias ghce="gh copilot explain"
 
 alias dotfiles="cd ~/.dotfiles && nvim ~/.dotfiles/"
