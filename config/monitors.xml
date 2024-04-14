@@ -15,7 +15,7 @@
         <mode>
           <width>1920</width>
           <height>1080</height>
-          <rate>59.998786926269531</rate>
+          <rate>59.999</rate>
         </mode>
       </monitor>
     </logicalmonitor>
@@ -33,7 +33,7 @@
         <mode>
           <width>1920</width>
           <height>1080</height>
-          <rate>60</rate>
+          <rate>60.000</rate>
         </mode>
       </monitor>
     </logicalmonitor>
@@ -54,7 +54,7 @@
         <mode>
           <width>1920</width>
           <height>1080</height>
-          <rate>60</rate>
+          <rate>60.000</rate>
         </mode>
       </monitor>
     </logicalmonitor>
@@ -63,8 +63,45 @@
         <connector>eDP-1</connector>
         <vendor>NCP</vendor>
         <product>0x0030</product>
-        <serial>0x00000000</serial>
-      </monitorspec>
-    </disabled>
+        <serial>0x00000000</serial> </monitorspec> </disabled>
+  </configuration>
+  <configuration>
+    <logicalmonitor>
+      <x>0</x>
+      <y>0</y>
+      <scale>1</scale>
+      <monitor>
+        <monitorspec>
+          <connector>HDMI-1-1</connector>
+          <vendor>DEL</vendor>
+          <product>DELL S3221QS</product>
+          <serial>20T07N3</serial>
+        </monitorspec>
+        <mode>
+          <width>2560</width>
+          <height>1440</height>
+          <rate>59.951</rate>
+        </mode>
+      </monitor>
+    </logicalmonitor>
+    <logicalmonitor>
+      <x>331</x>
+      <y>1440</y>
+      <scale>1</scale>
+      <primary>yes</primary>
+      <monitor>
+        <monitorspec>
+          <connector>eDP-1-1</connector>
+          <vendor>NCP</vendor>
+          <product>0x0030</product>
+          <serial>0x00000000</serial>
+        </monitorspec>
+        <mode>
+          <width>1920</width>
+          <height>1080</height>
+          <rate>59.999</rate>
+        </mode>
+      </monitor>
+    </logicalmonitor>
   </configuration>
 </monitors>

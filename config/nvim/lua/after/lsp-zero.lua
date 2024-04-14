@@ -32,23 +32,30 @@ lsp_zero.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
     -- Check to switch to :do for diagnostic ?
     vim.keymap.set("n", "<leader>do", function() vim.diagnostic.open_float() end, opts)
-    vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev() end, opts)
-    vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next() end, opts)
+    vim.keymap.set("n", "<leader>]", function() vim.diagnostic.goto_prev() end, opts)
+    vim.keymap.set("n", "<leader>[", function() vim.diagnostic.goto_next() end, opts)
     vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
-    vim.keymap.set("n", "<leader>rr", function() vim.lsp.buf.references() end, opts)
+    vim.keymap.set("n", "<leader>ref", function() vim.lsp.buf.references() end, opts)
     -- or F2
-    vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
-    vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+    vim.keymap.set("n", "<leader>R", function() vim.lsp.buf.rename() end, opts)
+    -- vim.keymap.set("i", "<leader>h", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-require('mason').setup({})
+require('mason').setup({
+
+})
 require('mason-lspconfig').setup({
     ensure_installed = {
         'lua_ls', 'rust_analyzer', 'bashls', 'diagnosticls',
         'eslint', 'pylsp', 'tsserver', 'vimls',
-        'yamlls', 'jsonls'
+        'yamlls', 'jsonls', 'cssls'
     },
     handlers = {
         lsp_zero.default_setup,
     },
+
 })
+
+require('lspconfig').cssls.setup{
+    filetypes = { 'css', 'scss', 'sass', 'less', 'uss', 'tss' },
+}

@@ -12,10 +12,13 @@ alias ghcs="gh copilot suggest -s"
 alias ghce="gh copilot explain"
 
 alias dotfiles="cd ~/.dotfiles && nvim ~/.dotfiles/"
-alias projects="cd ~/Projects/"
+alias projects="cd ~/Projects/ && clear && ls"
 alias downloads="cd ~/Downloads/"
 
 alias vi="nvim"
 alias vim="nvim"
+
+# Quick project launch
+alias arzo="cd ~/Projects/Arzo/Assets/Arzo/Scripts/ && nvim ~/Projects/Arzo/Assets/Arzo/Scripts/"
 
 

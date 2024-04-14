@@ -25,3 +25,12 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 -- vim.opt.netwr_header = { hidden = true }
+
+vim.filetype.add({
+    extension = {
+        uss = "uss",
+        tss = "tss"
+    }
+})
+vim.treesitter.language.register('css', 'uss')
+vim.treesitter.language.register('css', 'tss')

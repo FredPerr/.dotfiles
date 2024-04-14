@@ -9,6 +9,7 @@ ln -sf ~/.dotfiles/config/.bashrc ~/.bashrc
 ln -sf ~/.dotfiles/config/.zshrc ~/.zshrc
 ln -sf ~/.dotfiles/config/.zsh_functions ~/.zsh_functions
 ln -sf ~/.dotfiles/config/.zshenv ~/.zshenv
+ln -sf ~/.dotfiles/assets/.fonts ~/.fonts
 
 #
 # Inside ~/.config/ folder

@@ -5,16 +5,6 @@
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
 
-# -- bindings ------------------------------------------------------------------
-
-# preserve tmux stock bindings,
-# while adding bindings that don't conflict with these stock bindings
-# /!\ this disables some of Oh my tmux! bindings described in README.md
-#   - true
-#   - false (default)
-tmux_conf_preserve_stock_bindings=false
-
-
 # -- session creation ----------------------------------------------------------
 
 # prompt for session name when creating a new session, possible values are:
@@ -22,12 +12,6 @@ tmux_conf_preserve_stock_bindings=false
 #   - false (default)
 #   - disabled (do not modify new-session bindings)
 tmux_conf_new_session_prompt=false
-
-# new session retains current path, possible values are:
-#   - true
-#   - false (default)
-#   - disabled (do not modify new-session bindings)
-tmux_conf_new_session_retain_current_path=false
 
 
 # -- windows & pane creation ---------------------------------------------------
@@ -42,7 +26,7 @@ tmux_conf_new_window_retain_current_path=false
 #   - true
 #   - false (default)
 #   - disabled (do not modify new-window bindings)
-tmux_conf_new_window_reconnect_ssh=true
+tmux_conf_new_window_reconnect_ssh=false
 
 # new pane retains current path, possible values are:
 #   - true (default)
@@ -267,11 +251,7 @@ tmux_conf_theme_right_separator_sub="|"
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-
-# Default:
-#tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
-# Custom:
-tmux_conf_theme_status_left=" 🙉 "
+tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
 tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
 
 # status left style
@@ -323,7 +303,7 @@ tmux_conf_battery_bar_symbol_empty="◻"
 # battery bar length (in number of symbols), possible values are:
 #   - auto
 #   - a number, e.g. 5
-tmux_conf_battery_bar_length="5"
+tmux_conf_battery_bar_length="auto"
 
 # battery bar palette, possible values are:
 #   - gradient (default)
@@ -364,12 +344,12 @@ tmux_conf_theme_clock_style="24"
 #   - true
 #   - false (default)
 #   - disabled
+# on macOS, this requires installing reattach-to-user-namespace, see README.md
 # on Linux, this requires xsel, xclip or wl-copy
-tmux_conf_copy_to_os_clipboard=true
+tmux_conf_copy_to_os_clipboard=false
 
 
 # -- user customizations -------------------------------------------------------
-
 # this is the place to override or undo settings
 
 # increase history size
@@ -378,10 +358,13 @@ tmux_conf_copy_to_os_clipboard=true
 # start with mouse mode enabled
 set -g mouse on
 
+# terminal colors override
+set -ga terminal-overrides ',*256color*:smcup@:rmcup@'
+
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
-#set -g status-keys vi
-#set -g mode-keys vi
+set -g status-keys vi
+set -g mode-keys vi
 
 # replace C-b by C-a instead of using both prefixes
 set -gu prefix2
@@ -394,7 +377,7 @@ bind C-a send-prefix
 # bind c new-window -c '#{pane_current_path}' #!important
 
 # move status line to top
-set -g status-position top
+#set -g status-position top
 
 
 # -- tpm -----------------------------------------------------------------------
@@ -449,8 +432,6 @@ tmux_conf_uninstall_plugins_on_reload=true
 # then, use #{foo} in e.g. the 'tmux_conf_theme_status_left' or the
 # 'tmux_conf_theme_status_right' variables.
 
-# ------------------------------------------------------------------------------
-
 # # /!\ do not remove the following line
 # EOF
 #
@@ -465,22 +446,25 @@ tmux_conf_uninstall_plugins_on_reload=true
 #   ping -c 1 1.1.1.1 >/dev/null 2>&1 && printf '✔' || printf '✘'
 # }
 #
-# wan_ip_v4() {
-#   curl -f -s -m 2 -4 ifconfig.me
-#   sleep 300                                         # sleep for 5 minutes, throttle network requests whatever the value of status-interval
-# }
-#
-# wan_ip_v6() {
-#   curl -f -s -m 2 -6 ifconfig.me
-#   sleep 300                                         # sleep for 5 minutes, throttle network requests whatever the value of status-interval
-# }
-#
 # "$@"
 # # /!\ do not remove the previous line
-# #     do not write below this line
 
 
-###################################################################
-# Custom bindings defined by the user:
-###################################################################
+# Change the bindings of TMUX (personal config)
+bind v split-window -h
+bind h split-window -v
+
+bind-key -n -r C-h select-pane -L
+bind-key -n C-j select-pane -D
+bind-key -n C-k select-pane -U
+bind-key -n C-l select-pane -R
+
+bind-key -n M-q select-window -t 1
+bind-key -n M-w select-window -t 2
+bind-key -n M-e select-window -t 3
+
+bind-key -r M-h resize-pane -L 4
+bind-key -r M-j resize-pane -D 4
+bind-key -r M-k resize-pane -U 4
+bind-key -r M-l resize-pane -R 4
 

@@ -1,6 +1,23 @@
 [font]
 size = 14
 
+[font.normal]
+family = "Reddit Mono"
+style = "Regular"
+
+[font.italic]
+family = "Reddit Mono"
+style = "Italic"
+
+[font.bold]
+family = "Reddit Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Reddit Mono"
+style = "Bold Italic"
+
+
 [window]
 opacity = 0.9
 decorations= "none"
@@ -10,3 +27,13 @@ blur=true
 
 [shell]
 program = "tmux"
+
+[keyboard]
+bindings = [
+   { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
+]
+
+[[hints.enabled]]
+regex = "[^ ]+\\.rs:\\d+:\\d+"
+command = { program = "nvim" }
+mouse = { enabled = false }

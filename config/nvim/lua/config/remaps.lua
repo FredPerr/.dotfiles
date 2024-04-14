@@ -2,6 +2,7 @@ vim.g.mapleader = ' '
 
 -- Go back to Netrw explorer
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", "<cmd>Neotree<CR>")
 
 -- Tries to format and save the file.
 vim.keymap.set("n", "<leader>s", function()
@@ -13,7 +14,10 @@ end)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- Cancel <leader>f
+-- Remove Ctrl+Q keybinding
+vim.keymap.set("n", "Q", "<nop>")
+
+-- Format only
 vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end)
 
 -- Make the file executable (not silent)
@@ -25,3 +29,4 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 vim.o.clipboard = "unnamedplus"
+
