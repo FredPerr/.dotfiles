@@ -1,37 +1,38 @@
 [font]
-size = 14
+size = 15
 
-[font.normal]
-family = "Reddit Mono"
-style = "Regular"
+# [font.normal]
+# family = "Reddit Mono"
+# style = "Regular"
 
-[font.italic]
-family = "Reddit Mono"
-style = "Italic"
+# [font.italic]
+# family = "Reddit Mono"
+# style = "Italic"
 
-[font.bold]
-family = "Reddit Mono"
-style = "Bold"
+# [font.bold]
+# family = "Reddit Mono"
+# style = "Bold"
 
-[font.bold_italic]
-family = "Reddit Mono"
-style = "Bold Italic"
+# [font.bold_italic]
+# family = "Reddit Mono"
+# style = "Bold Italic"
 
 
 [window]
 opacity = 0.9
-decorations= "none"
-startup_mode="Fullscreen"
-blur=true
+decorations= "Transparent"
+startup_mode="SimpleFullscreen"
+dynamic_padding = true
+padding = { x = 5, y = 10}
 
-
+# Causing a bug on macOS
 [shell]
-program = "tmux"
+program = "/opt/homebrew/bin/tmux"
 
-[keyboard]
-bindings = [
-   { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
-]
+# [keyboard]
+#  bindings = [
+#     { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
+#  ]
 
 [[hints.enabled]]
 regex = "[^ ]+\\.rs:\\d+:\\d+"
