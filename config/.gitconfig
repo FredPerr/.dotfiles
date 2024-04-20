@@ -7,7 +7,7 @@
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [user]
-	email = fred@gnitic.ca
+	email = frederic.perr@gmail.com
 	name = Frédéric Perron
 [core]
 	editor = nvim
