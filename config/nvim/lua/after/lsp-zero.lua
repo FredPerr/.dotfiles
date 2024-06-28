@@ -10,6 +10,9 @@ cmp.setup({
 
         -- Ctrl+Space to trigger completion menu
         ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-s>'] = cmp.mapping.complete(),   -- not working...
+        ['<S-Tab>'] = cmp.mapping.complete(), -- not working...
+
 
         -- Navigate between snippet placeholder
         ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
@@ -20,6 +23,11 @@ cmp.setup({
         ['<C-d>'] = cmp.mapping.scroll_docs(4),
     })
 })
+
+
+
+
+
 
 
 lsp_zero.on_attach(function(client, bufnr)
@@ -56,6 +64,6 @@ require('mason-lspconfig').setup({
 
 })
 
-require('lspconfig').cssls.setup{
+require('lspconfig').cssls.setup {
     filetypes = { 'css', 'scss', 'sass', 'less', 'uss', 'tss' },
 }
