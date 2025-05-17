@@ -1,0 +1,16 @@
+Host github.com-school
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github-school.pub
+
+Host github.com-personal
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/ed25519.pub
+
+# Host lorem-ipsum
+#     Hostname x.x.x.x
+#     Port 22
+#     User root
+#     IdentityFile ~/.ssh/id_ed25519
+#     ForwardAgent yes # Optional, use the same key when logged in the remote server.

@@ -1,0 +1,21 @@
+[init]
+    defaultBranch = main
+[user]
+    email = frederic.perr@gmail.com
+    name = Frédéric Perron
+[core]
+    editor = code
+[alias]
+    poule = pull
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    unstage = reset HARD --
+    last = log -1 HEAD
+    lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
