@@ -1,0 +1,123 @@
+{
+  "files.autoSave": "afterDelay",
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.startupEditor": "none",
+  "terminal.integrated.env.osx": {
+    "Q_NEW_SESSION": "1"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.accessibilitySupport": "off",
+  "redhat.telemetry.enabled": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "explorer.confirmDelete": false,
+  "chat.editing.confirmEditRequestRemoval": false,
+  "workbench.colorTheme": "Vira Palenight",
+  "editor.fontSize": 16,
+  "editor.fontFamily": "Fire Code Nerd Font, monospace",
+  "editor.renderLineHighlight": "all",
+  "editor.cursorSmoothCaretAnimation": "off",
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.letterSpacing": 0,
+  "terminal.integrated.minimumContrastRatio": 4.5,
+  "terminal.integrated.background": "#1e1e1e", // VS Code 1.87+
+  "terminal.integrated.defaultProfile.osx": "zsh", // or "bash", "fish", etc.
+
+  "workbench.colorCustomizations": {
+    "[Vira*]": {
+      "terminal.background": "#15161e",
+      "terminal.foreground": "#d4d4d4",
+      "terminalCursor.background": "#d4d4d4",
+      "terminalCursor.foreground": "#d4d4d4",
+      "editorCursor.background": "#c6f5f1",
+      "editorCursor.foreground": "#db4f8eF7",
+      "editorError.background": "#9a2e30f7",
+      "statusBar.background": "#c6f5f1",
+      "statusBarItem.errorBackground": "#db4f8eF7",
+      "statusBarItem.errorForeground": "#ffffff",
+      "editorError.foreground": "#ffffff",
+      "editorMarkerNavigationError.headerBackground": "#db4f8eF7",
+      "editorMarkerNavigationError.background": "#db4f8eF7",
+      "toolbar.activeBackground": "#80CBC426",
+      "activityBarBadge.background": "#80CBC4",
+      "activityBar.activeBorder": "#80CBC4",
+      "activityBarTop.activeBorder": "#80CBC4",
+      "list.inactiveSelectionIconForeground": "#80CBC4",
+      "list.activeSelectionForeground": "#80CBC4",
+      "list.inactiveSelectionForeground": "#80CBC4",
+      "list.highlightForeground": "#80CBC4",
+      "sash.hoverBorder": "#80CBC480",
+      "list.activeSelectionIconForeground": "#80CBC4",
+      "scrollbarSlider.activeBackground": "#80CBC480",
+      "editorSuggestWidget.highlightForeground": "#80CBC4",
+      "textLink.foreground": "#80CBC4",
+      "progressBar.background": "#80CBC4",
+      "pickerGroup.foreground": "#80CBC4",
+      "tab.activeBorder": "#80CBC4",
+      "notificationLink.foreground": "#80CBC4",
+      "editorWidget.resizeBorder": "#80CBC4",
+      "editorWidget.border": "#80CBC4",
+      "settings.modifiedItemIndicator": "#80CBC4",
+      "settings.headerForeground": "#80CBC4",
+      "panelTitle.activeBorder": "#80CBC4",
+      "breadcrumb.activeSelectionForeground": "#80CBC4",
+      "menu.selectionForeground": "#80CBC4",
+      "menubar.selectionForeground": "#80CBC4",
+      "editor.findMatchBorder": "#80CBC4",
+      "selection.background": "#80CBC440",
+      "statusBarItem.remoteBackground": "#80CBC4",
+      "notebook.inactiveFocusedCellBorder": "#80CBC480",
+      "commandCenter.activeBorder": "#80CBC480"
+    }
+  },
+  "workbench.iconTheme": "CustomTheme",
+  "vim.cursorStylePerMode.insert": "block",
+  "vim.cursorStylePerMode.visualblock": "block",
+  "vim.autoindent": true,
+  "vim.easymotion": true,
+  "vim.searchHighlightColor": "rgb(110, 45, 34)",
+  "vim.substitutionColor": "#1d5433",
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 300,
+  "vim.highlightedyank.color": "rgba(0, 240, 170, 0.2)",
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.changeWordIncludesWhitespace": false,
+  "vim.insertModeKeyBindings": [],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Renaming to hh to go to line to prevent conflict with keybindings starting with g ...
+    {
+      "before": ["H", "H"],
+      "after": ["g", "g"]
+    },
+    {
+      "before": ["g", "g"],
+      "commands": []
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.explorerKind": "external",
+  "terminal.external.osxExec": "alacritty",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.defaultLocation": "editor",
+  "terminal.integrated.confirmOnKill": "never",
+  "editor.cursorBlinking": "solid",
+  "editor.minimap.autohide": true,
+  "git.autofetch": true,
+  "explorer.confirmDragAndDrop": false
+}

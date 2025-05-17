@@ -16,6 +16,10 @@ chmod +x "$(dirname "$0")"/*.sh
     echo -e "${GRAY}${line}${NC}"
 done
 
+./setup/scripts/show-hidden-files.sh | while IFS= read -r line; do
+    echo -e "${GRAY}${line}${NC}"
+done
+
 # Check if Homebrew is already installed
 if command -v brew &> /dev/null
 then
