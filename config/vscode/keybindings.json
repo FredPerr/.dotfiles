@@ -144,6 +144,7 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
   },
   {
+    "key": "space p v",
     "args": {
       "commands": [
         "workbench.action.toggleSidebarVisibility",
@@ -151,19 +152,18 @@
       ]
     },
     "command": "runCommands",
-    "key": "space p v",
     "when": "sideBarFocus && !inputFocus"
   },
   {
-    "command": "workbench.action.toggleSidebarVisibility",
     "key": "ctrl+e",
+    "command": "workbench.action.toggleSidebarVisibility",
     "when": "vim.mode != 'Insert'"
   },
 
   // Code actions
   {
-    "command": "editor.action.codeAction",
     "key": "space c a",
+    "command": "editor.action.codeAction",
     "when": "vim.mode=='Normal' && editorTextFocus"
   },
 
@@ -191,17 +191,17 @@
   {
     "key": "g s",
     "command": "workbench.action.gotoSymbol",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
+    "when": "vim.mode == 'Normal' && editorTextFocus && !inputFocus"
   },
   {
     "key": "g r",
     "command": "workbench.action.goToReferences",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
+    "when": "vim.mode == 'Normal' && editorTextFocus && !inputFocus"
   },
   {
     "key": "g i",
     "command": "workbench.action.goToImplementation",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
+    "when": "vim.mode == 'Normal' && editorTextFocus && !inputFocus"
   },
   {
     "key": "ctrl+x",
@@ -212,7 +212,7 @@
   {
     "key": "g c c",
     "command": "editor.action.commentLine",
-    "when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus)"
+    "when": "vim.mode != 'Insert' && (editorTextFocus && !inputFocus)"
   },
 
   // File explorer
@@ -291,6 +291,16 @@
     "key": "space t",
     "command": "workbench.action.createTerminalEditorSameGroup",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !terminalFocus"
+  },
+  {
+    "key": "g g",
+    "command": "list.focusFirst",
+    "when": "listFocus && !inputFocus && !statusBarFocused"
+  },
+  {
+    "key": "g g",
+    "command": "-list.focusFirst",
+    "when": "listFocus && !inputFocus"
   }
   // Open a alacritty as the terminal in another window in another program
 ]
