@@ -119,5 +119,6 @@
   "editor.cursorBlinking": "solid",
   "editor.minimap.autohide": true,
   "git.autofetch": true,
-  "explorer.confirmDragAndDrop": false
+  "explorer.confirmDragAndDrop": false,
+  "git.confirmSync": false
 }
