@@ -301,6 +301,18 @@
     "key": "g g",
     "command": "-list.focusFirst",
     "when": "listFocus && !inputFocus"
+  },
+  // Go to the next problem
+  {
+    "key": "]",
+    "command": "editor.action.marker.next",
+    "when": "editorTextFocus && !editorReadonly && vim.mode != 'Insert' && !statusBarFocused"
+  },
+  // Go to the previous problem
+  {
+    "key": "[",
+    "command": "editor.action.marker.prev",
+    "when": "editorTextFocus && !editorReadonly && vim.mode != 'Insert' && !statusBarFocused"
   }
   // Open a alacritty as the terminal in another window in another program
 ]

@@ -120,5 +120,8 @@
   "editor.minimap.autohide": true,
   "git.autofetch": true,
   "explorer.confirmDragAndDrop": false,
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
