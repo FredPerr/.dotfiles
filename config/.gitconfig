@@ -3,7 +3,8 @@
 [user]
     email = frederic.perr@gmail.com
     name = Frédéric Perron
-	  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFkf3tYjmS7w1EBRnvV+RWNnj6ZhAzco/pQ7dBpUZ+y+
+    ; SSH key from 1Password
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFkf3tYjmS7w1EBRnvV+RWNnj6ZhAzco/pQ7dBpUZ+y+
 [core]
     editor = code
 [alias]

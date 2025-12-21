@@ -1,0 +1,15 @@
+# Personal GitHub account
+Host github.com
+    HostName github.com
+    User git
+
+# Matagami server (gnitic)
+Host matagami
+    Hostname 137.184.164.88
+    Port 22
+    User root
+    ForwardAgent yes
+
+# For every host, the SSH key is stored in 1Password
+Host *
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

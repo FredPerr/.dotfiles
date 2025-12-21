@@ -105,6 +105,7 @@
   "editor.renderLineHighlight": "all",
   "editor.minimap.autohide": "mouseover",
   "editor.minimap.enabled": false,
+  "explorer.compactFolders": false,
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.cursorStyle": "block",
