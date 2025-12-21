@@ -115,6 +115,19 @@
   "workbench.tree.renderIndentGuides": "onHover",
   "workbench.colorTheme": "Atom One Dark",
   "accessibility.verbosity.inlineChat": false,
+  "window.commandCenter": false,
+  "workbench.editor.showTabs": "none",
+  "breadcrumbs.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "workbench.activityBar.location": "top",
+  "editor.inlineSuggest.showToolbar": "never",
+  "workbench.editor.editorActionsLocation": "hidden",
+  "window.customTitleBarVisibility": "never",
+  "workbench.layoutControl.enabled": false,
+  "window.titleBarStyle": "native",
+  "chat.agentSessionsViewLocation": "disabled",
+  "chat.viewWelcome.enabled": false,
+  "chat.viewSessions.enabled": false,
 
   // Telemetry
   "redhat.telemetry.enabled": false,
@@ -125,6 +138,26 @@
   "github.copilot.nextEditSuggestions.enabled": true,
   "mdb.mcp.server": "prompt",
   "chat.tools.terminal.autoApprove": {},
+  "chat.implicitContext.enabled": {
+    "panel": "always"
+  },
+  "chat.agent.thinking.generateTitles": false,
+  "chat.editRequests": "inline",
+  "chat.implicitContext.suggestedContext": true,
+  "chat.mcp.access": "registry",
+  "chat.notifyWindowOnConfirmation": false,
+  "chat.notifyWindowOnResponseReceived": false,
+  "chat.restoreLastPanelSession": false,
+  "chat.viewTitle.enabled": false,
+  "chat.tools.terminal.terminalProfile.osx": {
+    "path": "zsh"
+  },
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+  },
+  "chat.promptFilesLocations": {
+    ".github/prompts": true
+  },
 
   // Languages and code intelligence
   "typescript.referencesCodeLens.enabled": true,
@@ -167,7 +200,7 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["/"],
-      "commands": ["action.find"]
+      "commands": ["actions.find"]
     },
     {
       "before": ["?"],
@@ -177,7 +210,7 @@
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["/"],
-      "commands": ["action.find"]
+      "commands": ["actions.find"]
     },
     {
       "before": ["?"],
@@ -225,5 +258,7 @@
 
   // GitLens
   "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilot:gpt-4.1"
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "chat.commandCenter.enabled": false,
+  "chat.viewSessions.orientation": "stacked"
 }
