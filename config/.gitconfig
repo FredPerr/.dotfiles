@@ -3,19 +3,23 @@
 [user]
     email = frederic.perr@gmail.com
     name = Frédéric Perron
+	  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFkf3tYjmS7w1EBRnvV+RWNnj6ZhAzco/pQ7dBpUZ+y+
 [core]
     editor = code
 [alias]
     poule = pull
     co = checkout
     br = branch
-    ci = commit
+    ci = commit -m
     st = status
     unstage = reset HARD --
     last = log -1 HEAD
     lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
 [filter "lfs"]
     clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true

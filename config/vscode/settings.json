@@ -1,103 +1,186 @@
 {
+  "$schema": "vscode://schemas/settings/default",
+  // Auto Save
   "files.autoSave": "afterDelay",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit",
+    "source.fixAll.biome": "explicit"
+  },
+
+  // Language servers
+  "editor.defaultFormatter": "biomejs.biome",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.autoClosingTags": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.autoClosingTags": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.autoClosingTags": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[xml]": {
+    "editor.autoClosingTags": true,
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "java.format.settings.profile": "GoogleStyle"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+
+  // Git
   "git.openRepositoryInParentFolders": "never",
   "workbench.startupEditor": "none",
+  "git.autofetch": true,
+  "git.confirmSync": false,
+
+  // Terminal
+  "terminal.integrated.defaultProfile.osx": "zsh", // or "bash", "fish", etc.
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.explorerKind": "external",
+  "terminal.external.osxExec": "alacritty",
+  "terminal.integrated.copyOnSelection": false,
+  "terminal.integrated.defaultLocation": "editor",
+  "terminal.integrated.confirmOnKill": "never",
   "terminal.integrated.env.osx": {
     "Q_NEW_SESSION": "1"
   },
-  "security.workspace.trust.untrustedFiles": "open",
-  "editor.accessibilitySupport": "off",
-  "redhat.telemetry.enabled": false,
-  "terminal.integrated.enableMultiLinePasteWarning": "never",
+
+  // File managements
   "explorer.confirmDelete": false,
-  "chat.editing.confirmEditRequestRemoval": false,
-  "workbench.colorTheme": "Vira Palenight",
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  "files.exclude": {
+    "**/.git": false
+  },
+
+  // Accessibility & Visuals
   "editor.fontSize": 16,
-  "editor.fontFamily": "Fire Code Nerd Font, monospace",
+  "editor.cursorBlinking": "solid",
+  "editor.accessibilitySupport": "off",
+  "editor.fontFamily": "FiraCode Nerd Font, monospace",
   "editor.renderLineHighlight": "all",
-  "editor.cursorSmoothCaretAnimation": "off",
+  "editor.minimap.autohide": "mouseover",
+  "editor.minimap.enabled": false,
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.cursorStyle": "block",
   "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.lineHeight": 1.2,
-  "terminal.integrated.letterSpacing": 0,
-  "terminal.integrated.minimumContrastRatio": 4.5,
-  "terminal.integrated.background": "#1e1e1e", // VS Code 1.87+
-  "terminal.integrated.defaultProfile.osx": "zsh", // or "bash", "fish", etc.
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.tree.indent": 12,
+  "workbench.tree.renderIndentGuides": "onHover",
+  "workbench.colorTheme": "Atom One Dark",
+  "accessibility.verbosity.inlineChat": false,
 
-  "workbench.colorCustomizations": {
-    "[Vira*]": {
-      "terminal.background": "#15161e",
-      "terminal.foreground": "#d4d4d4",
-      "terminalCursor.background": "#d4d4d4",
-      "terminalCursor.foreground": "#d4d4d4",
-      "editorCursor.background": "#c6f5f1",
-      "editorCursor.foreground": "#db4f8eF7",
-      "editorError.background": "#9a2e30f7",
-      "statusBar.background": "#c6f5f1",
-      "statusBarItem.errorBackground": "#db4f8eF7",
-      "statusBarItem.errorForeground": "#ffffff",
-      "editorError.foreground": "#ffffff",
-      "editorMarkerNavigationError.headerBackground": "#db4f8eF7",
-      "editorMarkerNavigationError.background": "#db4f8eF7",
-      "toolbar.activeBackground": "#80CBC426",
-      "activityBarBadge.background": "#80CBC4",
-      "activityBar.activeBorder": "#80CBC4",
-      "activityBarTop.activeBorder": "#80CBC4",
-      "list.inactiveSelectionIconForeground": "#80CBC4",
-      "list.activeSelectionForeground": "#80CBC4",
-      "list.inactiveSelectionForeground": "#80CBC4",
-      "list.highlightForeground": "#80CBC4",
-      "sash.hoverBorder": "#80CBC480",
-      "list.activeSelectionIconForeground": "#80CBC4",
-      "scrollbarSlider.activeBackground": "#80CBC480",
-      "editorSuggestWidget.highlightForeground": "#80CBC4",
-      "textLink.foreground": "#80CBC4",
-      "progressBar.background": "#80CBC4",
-      "pickerGroup.foreground": "#80CBC4",
-      "tab.activeBorder": "#80CBC4",
-      "notificationLink.foreground": "#80CBC4",
-      "editorWidget.resizeBorder": "#80CBC4",
-      "editorWidget.border": "#80CBC4",
-      "settings.modifiedItemIndicator": "#80CBC4",
-      "settings.headerForeground": "#80CBC4",
-      "panelTitle.activeBorder": "#80CBC4",
-      "breadcrumb.activeSelectionForeground": "#80CBC4",
-      "menu.selectionForeground": "#80CBC4",
-      "menubar.selectionForeground": "#80CBC4",
-      "editor.findMatchBorder": "#80CBC4",
-      "selection.background": "#80CBC440",
-      "statusBarItem.remoteBackground": "#80CBC4",
-      "notebook.inactiveFocusedCellBorder": "#80CBC480",
-      "commandCenter.activeBorder": "#80CBC480"
-    }
-  },
-  "workbench.iconTheme": "CustomTheme",
+  // Telemetry
+  "redhat.telemetry.enabled": false,
+
+  // Copilot
+  "chat.agent.enabled": true,
+  "chat.editing.confirmEditRequestRemoval": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "mdb.mcp.server": "prompt",
+  "chat.tools.terminal.autoApprove": {},
+
+  // Languages and code intelligence
+  "typescript.referencesCodeLens.enabled": true,
+  "javascript.referencesCodeLens.enabled": true,
+  "typescript.preferences.preferTypeOnlyAutoImports": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.autoClosingTags": true,
+  "typescript.inlayHints.parameterNames.enabled": "literals",
+  "java.referencesCodeLens.enabled": true,
+  "editor.inlayHints.enabled": "on",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.showUnused": true,
+  "editor.suggest.showReferences": false,
+  "references.preferredLocation": "view",
+  "workbench.editor.enablePreview": true,
+
+  //==============
+  // Extensions
+  //==============
+
+  // Vim
   "vim.cursorStylePerMode.insert": "block",
   "vim.cursorStylePerMode.visualblock": "block",
   "vim.autoindent": true,
   "vim.easymotion": true,
-  "vim.searchHighlightColor": "rgb(110, 45, 34)",
-  "vim.substitutionColor": "#1d5433",
+  "vim.searchHighlightColor": "rgb(250, 250, 34, 0.3)",
+  "vim.substitutionColor": "rgba(250, 100, 250, 0.3)",
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.duration": 300,
   "vim.highlightedyank.color": "rgba(0, 240, 170, 0.2)",
-  "vim.incsearch": true,
+  "vim.hlsearch": false,
+  "vim.incsearch": false,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
-  "vim.hlsearch": true,
   "vim.changeWordIncludesWhitespace": false,
   "vim.insertModeKeyBindings": [],
   "vim.normalModeKeyBindingsNonRecursive": [
-    // Renaming to hh to go to line to prevent conflict with keybindings starting with g ...
     {
-      "before": ["H", "H"],
-      "after": ["g", "g"]
+      "before": ["/"],
+      "commands": ["action.find"]
     },
     {
-      "before": ["g", "g"],
-      "commands": []
+      "before": ["?"],
+      "commands": ["editor.action.startFindReplaceAction"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["/"],
+      "commands": ["action.find"]
+    },
+    {
+      "before": ["?"],
+      "commands": ["editor.action.startFindReplaceAction"]
     }
   ],
   "vim.leader": "<space>",
@@ -108,20 +191,38 @@
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "terminal.explorerKind": "external",
-  "terminal.external.osxExec": "alacritty",
-  "terminal.integrated.copyOnSelection": true,
-  "terminal.integrated.defaultLocation": "editor",
-  "terminal.integrated.confirmOnKill": "never",
-  "editor.cursorBlinking": "solid",
-  "editor.minimap.autohide": true,
-  "git.autofetch": true,
-  "explorer.confirmDragAndDrop": false,
-  "git.confirmSync": false,
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+
+  // Coverage Gutters
+  "coverage-gutters.showLineCoverage": true,
+  "coverage-gutters.coverageFileNames": [
+    "application/target/site/jacoco/jacoco.xml"
+  ],
+
+  // Auto Close Tag
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascriptreact",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (EEx)",
+    "HTML (Eex)",
+    "plist"
+  ],
+
+  // Makefile
+  "makefile.configureOnOpen": true,
+
+  // GitLens
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1"
 }

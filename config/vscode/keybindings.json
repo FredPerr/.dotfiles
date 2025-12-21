@@ -46,8 +46,8 @@
         "workbench.action.focusAuxiliaryBar"
       ]
     },
-    "key": "m",
-    "when": "vim.mode != 'Insert' && editorTextFocus"
+    "key": "ctrl+m",
+    "when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus)"
   },
 
   // Find a file
@@ -158,6 +158,13 @@
     "key": "ctrl+e",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "vim.mode != 'Insert'"
+  },
+
+  // Terminal toggling
+  {
+    "key": "space p t",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !terminalFocus"
   },
 
   // Code actions
