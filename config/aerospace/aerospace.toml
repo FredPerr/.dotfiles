@@ -171,6 +171,10 @@ on-mode-changed = []
     if.app-id = 'com.google.Chrome'
     run = 'move-node-to-workspace 1'
 
+[[on-window-detected]]
+    if.app-id = 'org.mozilla.firefox'
+    run = 'move-node-to-workspace 1'
+
 # === (Workspace 2) ===
 # Coding (IDE, API tester)
 [[on-window-detected]]

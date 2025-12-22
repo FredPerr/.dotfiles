@@ -28,9 +28,5 @@ source ~/.dotfiles/scripts/remap.sh &> /dev/null
 
 bindkey -v
 
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
 # Kiro CLI post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
