@@ -51,7 +51,6 @@ brew install \
     zsh-autosuggestions \
     docker \
     openssl \
-    watchman \
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -66,6 +65,7 @@ brew install --cask \
     google-chrome \
     firefox \
     bruno \
+    nikitabobko/tap/aerospace
 
 # Install AWS specific tools
 brew tap aws/tap

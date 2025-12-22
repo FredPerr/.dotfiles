@@ -34,7 +34,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[xml]": {
-    "editor.autoClosingTags": true,
     "editor.defaultFormatter": "redhat.vscode-xml"
   },
   "[scss]": {
@@ -43,8 +42,7 @@
   "[java]": {
     "editor.defaultFormatter": "redhat.java",
     "editor.tabSize": 4,
-    "editor.insertSpaces": true,
-    "java.format.settings.profile": "GoogleStyle"
+    "editor.insertSpaces": true
   },
   "[cpp]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
@@ -153,7 +151,7 @@
     "path": "zsh"
   },
   "chat.instructionsFilesLocations": {
-    ".github/instructions": true,
+    ".github/instructions": true
   },
   "chat.promptFilesLocations": {
     ".github/prompts": true
@@ -260,5 +258,8 @@
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
   "chat.commandCenter.enabled": false,
-  "chat.viewSessions.orientation": "stacked"
+  "chat.viewSessions.orientation": "stacked",
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  }
 }
