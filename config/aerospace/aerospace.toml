@@ -148,13 +148,14 @@ alt-n = 'workspace 6 --fail-if-noop'
 alt-m = 'workspace 7 --fail-if-noop'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-alt-shift-1 = 'move-node-to-workspace 1'
-alt-shift-2 = 'move-node-to-workspace 2'
-alt-shift-3 = 'move-node-to-workspace 3'
-alt-shift-4 = 'move-node-to-workspace 4'
-alt-shift-5 = 'move-node-to-workspace 5'
-alt-shift-6 = 'move-node-to-workspace 6'
-alt-shift-7 = 'move-node-to-workspace 7'
+alt-shift-z = 'move-node-to-workspace 1'
+alt-shift-x = 'move-node-to-workspace 2'
+alt-shift-c = 'move-node-to-workspace 3'
+alt-shift-v = 'move-node-to-workspace 4'
+alt-shift-b = 'move-node-to-workspace 5'
+alt-shift-n = 'move-node-to-workspace 6'
+alt-shift-m = 'move-node-to-workspace 7'
+
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -213,17 +214,18 @@ run = 'move-node-to-workspace 3'
 
 # === (Workspace 4) ===
 # Messaging and communication apps, emails
-[[on-window-detected]]
-if.app-id = 'com.tinyspeck.slackmacgap'
-run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.teams2'
-run = 'move-node-to-workspace 4'
+    if.app-id = 'com.tinyspeck.slackmacgap'
+    run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.Outlook'
-run = 'move-node-to-workspace 4'
+    if.app-id = 'com.microsoft.teams2'
+    run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+    if.app-id = 'com.microsoft.Outlook'
+    run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
 if.app-id = 'com.hnc.Discord'

@@ -68,5 +68,5 @@ brew install --cask \
     nikitabobko/tap/aerospace
 
 # Install AWS specific tools
-brew tap aws/tap
-brew install --cask awscli aws-sam-cli aws-google-auth
+curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+sudo installer -pkg AWSCLIV2.pkg -target /

@@ -120,7 +120,6 @@
   "workbench.activityBar.location": "top",
   "editor.inlineSuggest.showToolbar": "never",
   "workbench.editor.editorActionsLocation": "hidden",
-  "window.customTitleBarVisibility": "never",
   "workbench.layoutControl.enabled": false,
   "window.titleBarStyle": "native",
   "chat.agentSessionsViewLocation": "disabled",
@@ -261,5 +260,8 @@
   "chat.viewSessions.orientation": "stacked",
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "gitlens.advanced.messages": {
+    "suppressIntegrationRequestFailed500Warning": true
   }
 }
