@@ -2,16 +2,16 @@
   "$schema": "vscode://schemas/settings/default",
   // Auto Save
   "files.autoSave": "afterDelay",
+  "explorer.autoReveal": "focusNoScroll",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.organizeImports.biome": "explicit",
     "source.fixAll.biome": "explicit"
   },
-
   // Language servers
   "editor.defaultFormatter": "biomejs.biome",
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -67,13 +67,11 @@
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-
   // Git
   "git.openRepositoryInParentFolders": "never",
   "workbench.startupEditor": "none",
   "git.autofetch": true,
   "git.confirmSync": false,
-
   // Terminal
   "terminal.integrated.defaultProfile.osx": "zsh", // or "bash", "fish", etc.
   "terminal.integrated.enableMultiLinePasteWarning": "never",
@@ -85,7 +83,6 @@
   "terminal.integrated.env.osx": {
     "Q_NEW_SESSION": "1"
   },
-
   // File managements
   "explorer.confirmDelete": false,
   "security.workspace.trust.untrustedFiles": "open",
@@ -94,7 +91,6 @@
   "files.exclude": {
     "**/.git": false
   },
-
   // Accessibility & Visuals
   "editor.fontSize": 16,
   "editor.cursorBlinking": "solid",
@@ -125,10 +121,8 @@
   "chat.agentSessionsViewLocation": "disabled",
   "chat.viewWelcome.enabled": false,
   "chat.viewSessions.enabled": false,
-
   // Telemetry
   "redhat.telemetry.enabled": false,
-
   // Copilot
   "chat.agent.enabled": true,
   "chat.editing.confirmEditRequestRemoval": false,
@@ -155,7 +149,6 @@
   "chat.promptFilesLocations": {
     ".github/prompts": true
   },
-
   // Languages and code intelligence
   "typescript.referencesCodeLens.enabled": true,
   "javascript.referencesCodeLens.enabled": true,
@@ -173,11 +166,9 @@
   "editor.suggest.showReferences": false,
   "references.preferredLocation": "view",
   "workbench.editor.enablePreview": true,
-
   //==============
   // Extensions
   //==============
-
   // Vim
   "vim.cursorStylePerMode.insert": "block",
   "vim.cursorStylePerMode.visualblock": "block",
@@ -196,22 +187,38 @@
   "vim.insertModeKeyBindings": [],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["/"],
-      "commands": ["actions.find"]
+      "before": [
+        "/"
+      ],
+      "commands": [
+        "actions.find"
+      ]
     },
     {
-      "before": ["?"],
-      "commands": ["editor.action.startFindReplaceAction"]
+      "before": [
+        "?"
+      ],
+      "commands": [
+        "editor.action.startFindReplaceAction"
+      ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": ["/"],
-      "commands": ["actions.find"]
+      "before": [
+        "/"
+      ],
+      "commands": [
+        "actions.find"
+      ]
     },
     {
-      "before": ["?"],
-      "commands": ["editor.action.startFindReplaceAction"]
+      "before": [
+        "?"
+      ],
+      "commands": [
+        "editor.action.startFindReplaceAction"
+      ]
     }
   ],
   "vim.leader": "<space>",
@@ -222,13 +229,11 @@
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
-
   // Coverage Gutters
   "coverage-gutters.showLineCoverage": true,
   "coverage-gutters.coverageFileNames": [
     "application/target/site/jacoco/jacoco.xml"
   ],
-
   // Auto Close Tag
   "auto-close-tag.activationOnLanguage": [
     "xml",
@@ -249,10 +254,8 @@
     "HTML (Eex)",
     "plist"
   ],
-
   // Makefile
   "makefile.configureOnOpen": true,
-
   // GitLens
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
@@ -263,5 +266,15 @@
   },
   "gitlens.advanced.messages": {
     "suppressIntegrationRequestFailed500Warning": true
-  }
+  },
+  "docker.extension.enableComposeLanguageServer": false,
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+  },
+  "dev.containers.copyArgs": [
+    "-p"
+  ],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
 }
