@@ -150,6 +150,8 @@
     ".github/prompts": true
   },
   // Languages and code intelligence
+  "editor.wordBasedSuggestions": "off",
+  "editor.snippetSuggestions": "none",
   "typescript.referencesCodeLens.enabled": true,
   "javascript.referencesCodeLens.enabled": true,
   "typescript.preferences.preferTypeOnlyAutoImports": false,
