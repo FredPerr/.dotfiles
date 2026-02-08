@@ -45,6 +45,7 @@ brew install \
     ripgrep \
     fd \
     fzf \
+    eza \
     wget \
     zsh \
     zsh-syntax-highlighting \

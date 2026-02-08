@@ -1,4 +1,11 @@
 [
+  // Project opening
+  {
+    // projectManager.listProjects
+    "command": "projectManager.listProjects",
+    "key": "space p p",
+    "when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus)"
+  },
   {
     // Trigger suggestions/intellisense
     "command": "editor.action.triggerSuggest",
