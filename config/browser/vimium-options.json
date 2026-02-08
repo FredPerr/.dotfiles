@@ -1,0 +1,5 @@
+{
+  "keyMappings": "# Insert your preferred key mappings here.\n# Navigation dans la page (Scroll)\nmap <c-j> scrollDown\nmap <c-k> scrollUp\nmap <c-h> scrollLeft\nmap <c-l> scrollRight\n\n# Navigation entre les onglets (Tabs)\n# Puisque tu voulais utiliser ctrl+h/l pour changer de groupe dans VS Code,\n# voici l'équivalent pour changer d'onglet :\nmap <c-p> previousTab\nmap <c-n> nextTab",
+  "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\n\n# More examples.\n#\n# (Vimium supports search completion Wikipedia, as\n# above, and for these.)\n#\n\n# l: https://www.google.com/search?q=%s&btnI I'm feeling lucky...\n# y: https://www.youtube.com/results?search_query=%s Youtube\n# gm: https://www.google.com/maps?q=%s Google maps\n# b: https://www.bing.com/search?q=%s Bing\n# d: https://duckduckgo.com/?q=%s DuckDuckGo\n# az: https://www.amazon.com/s/?field-keywords=%s\n# qw: https://www.qwant.com/?q=%s Qwant\n\ng: https://www.google.com/search?q=%s Google\nge: https://gemini.google.com/app?q=%s Gemini\nch: https://chatgpt.com/?q=%s ChatGPT\ncl: https://claude.ai/new?q=%s Claude",
+  "settingsVersion": "2.4.0"
+}

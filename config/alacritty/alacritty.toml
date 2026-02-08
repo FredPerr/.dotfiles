@@ -39,3 +39,13 @@ regex = "[^ ]+\\.[a-z0-9]+:\\d+(?::\\d+)?"
 command = { program = "code", args = ["--goto"] }
 mouse = { enabled = true, mods = "Command" }
 post_processing = true
+
+[[keyboard.bindings]]
+chars = "\u001b[1;5H"
+key = "H"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001b[1;5L"
+key = "L"
+mods = "Control|Shift"

@@ -483,3 +483,38 @@ tmux_conf_uninstall_plugins_on_reload=true
 ###################################################################
 # Custom bindings defined by the user:
 ###################################################################
+
+# -- CUSTOM NAVIGATION -------------------------------------------------------
+
+# 1. Terminal Compatibility Settings
+set -s extended-keys on
+set -as terminal-features 'xterm*:extkeys'
+
+# 2. Clear out existing root bindings to avoid conflicts
+unbind -n C-h
+unbind -n C-l
+unbind -n C-v
+unbind -n C-s
+
+# 3. WINDOW Navigation (Ctrl + h/l) - No prefix required
+# These remain as they were working perfectly for you
+bind -n C-h previous-window
+bind -n C-l next-window
+
+# 4. SPLITS (Ctrl + v/s) - No prefix required
+# Vertical split with Ctrl+v, Horizontal split with Ctrl+s
+# Opens in the current directory path
+bind -n C-v split-window -h -c "#{pane_current_path}"
+bind -n C-s split-window -v -c "#{pane_current_path}"
+
+# 5. PANE Navigation (Standard Prefix)
+# Since we unbind prefix-based h/l in step 2, we re-bind them here 
+# to ensure the standard "Prefix + h/j/k/l" always works for panes.
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# Create new window with Ctrl-n (No prefix)
+unbind -n C-n
+bind -n C-n new-window -c "#{pane_current_path}"
