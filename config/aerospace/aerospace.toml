@@ -21,8 +21,8 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 # You can set 0 to disable the padding feature
 accordion-padding = 0
 
-# Possible values: tiles|accordion
-default-root-container-layout = 'accordion'
+# Possible values: tiles|accordion     
+default-root-container-layout = 'tiles'
 
 # Possible values: horizontal|vertical|auto
 # 'auto' means: wide monitor (anything wider than high) gets horizontal orientation,
@@ -42,16 +42,11 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 automatically-unhide-macos-hidden-apps = true
 
 # List of workspaces that should stay alive even when they contain no windows,
-# even when they are invisible.
+
 persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7"]
 [workspace-to-monitor-force-assignment]
-1 = ["main", "Built-in Retina Display"]
-2 = ["DELL", "secondary"]
-3 = ["main", "Built-in Retina Display"]
-4 = ["main", "Built-in Retina Display"]
-5 = ["DELL", "secondary"]
-6 = ["main", "Built-in Retina Display"]
-7 = ["main", "Built-in Retina Display"]
+2 = ["DELL", "secondary"]               # Code on external monitor
+3 = ["main", "Built-in Retina Display"] # Command line on main monitor
 
 
 # A callback that runs every time binding mode changes
@@ -117,7 +112,8 @@ outer.right = 0
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
-alt-f = 'fullscreen'
+alt-g = 'fullscreen'
+
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-h = 'focus left'
@@ -127,8 +123,6 @@ alt-l = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 alt-shift-h = 'move left'
-# alt-shift-j = 'move down'
-# alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
 alt-shift-k = 'move-workspace-to-monitor secondary'
@@ -139,22 +133,22 @@ alt-minus = 'resize smart -50'
 alt-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-z = 'workspace 1 --fail-if-noop'
-alt-x = 'workspace 2 --fail-if-noop'
-alt-c = 'workspace 3 --fail-if-noop'
-alt-v = 'workspace 4 --fail-if-noop'
-alt-b = 'workspace 5 --fail-if-noop'
-alt-n = 'workspace 6 --fail-if-noop'
-alt-m = 'workspace 7 --fail-if-noop'
-
+alt-m = 'workspace 1 --fail-if-noop'
+alt-n = 'workspace 2 --fail-if-noop'
+alt-o = 'workspace 3 --fail-if-noop'
+alt-p = 'workspace 4 --fail-if-noop'
+alt-q = 'workspace 5 --fail-if-noop'
+alt-r = 'workspace 6 --fail-if-noop'
+alt-s = 'workspace 7 --fail-if-noop'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-alt-shift-z = 'move-node-to-workspace 1'
-alt-shift-x = 'move-node-to-workspace 2'
-alt-shift-c = 'move-node-to-workspace 3'
-alt-shift-v = 'move-node-to-workspace 4'
-alt-shift-b = 'move-node-to-workspace 5'
-alt-shift-n = 'move-node-to-workspace 6'
-alt-shift-m = 'move-node-to-workspace 7'
+
+alt-shift-g = 'move-node-to-workspace 1'
+alt-shift-m = 'move-node-to-workspace 2'
+alt-shift-n = 'move-node-to-workspace 3'
+alt-shift-o = 'move-node-to-workspace 4'
+alt-shift-p = 'move-node-to-workspace 5'
+alt-shift-q = 'move-node-to-workspace 6'
+alt-shift-r = 'move-node-to-workspace 7'
 
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
@@ -184,7 +178,6 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
-
 # === (Workspace 1) ===
 # Browsers
 [[on-window-detected]]
@@ -201,10 +194,6 @@ run = 'move-node-to-workspace 1'
 if.app-id = 'com.microsoft.VSCode'
 run = 'move-node-to-workspace 2'
 
-[[on-window-detected]]
-if.app-id = 'com.usebruno.appac'
-run = 'move-node-to-workspace 2'
-
 # === (Workspace 3) ===
 # Terminal
 [[on-window-detected]]
@@ -216,28 +205,25 @@ run = 'move-node-to-workspace 3'
 # Messaging and communication apps, emails
 
 [[on-window-detected]]
-    if.app-id = 'com.tinyspeck.slackmacgap'
-    run = 'move-node-to-workspace 4'
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
-    if.app-id = 'com.microsoft.teams2'
-    run = 'move-node-to-workspace 4'
+if.app-id = 'com.microsoft.teams2'
+run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
-    if.app-id = 'com.microsoft.Outlook'
-    run = 'move-node-to-workspace 4'
+if.app-id = 'com.microsoft.Outlook'
+run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
 if.app-id = 'com.hnc.Discord'
 run = 'move-node-to-workspace 4'
 
+
 # === (Workspace 5) ===
-# Docs
 [[on-window-detected]]
-if.app-id = 'md.obsidian'
-run = 'move-node-to-workspace 5'
-[[on-window-detected]]
-if.app-id = 'notion.id'
+if.app-id = 'us.zoom.xos'
 run = 'move-node-to-workspace 5'
 
 # === (Workspace 6) ===
@@ -245,6 +231,10 @@ run = 'move-node-to-workspace 5'
 [[on-window-detected]]
 if.app-name-regex-substring = 'calendar'
 run = 'move-node-to-workspace 6'
+# Docs
+[[on-window-detected]]
+if.app-id = 'notion.id'
+run = 'move-node-to-workspace 5'
 
 # === (Workspace 7) ===
 # Miscs
@@ -262,4 +252,19 @@ if.app-id = 'com.apple.systempreferences'
 run = 'move-node-to-workspace 7'
 [[on-window-detected]]
 if.app-id = 'com.apple.calculator'
+run = 'move-node-to-workspace 7'
+[[on-window-detected]]
+if.app-id = 'com.usebruno.app'
+run = 'move-node-to-workspace 7'
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Excel'
+run = 'move-node-to-workspace 7'
+[[on-window-detected]]
+if.app-name-regex-substring = 'Preview'
+run = 'move-node-to-workspace 7'
+[[on-window-detected]]
+if.app-name-regex-substring = 'Flow'
+run = 'move-node-to-workspace 7'
+[[on-window-detected]]
+if.app-name-regex-substring = 'System Settings'
 run = 'move-node-to-workspace 7'

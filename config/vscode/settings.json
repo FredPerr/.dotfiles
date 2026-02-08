@@ -73,7 +73,7 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   // Terminal
-  "terminal.integrated.defaultProfile.osx": "zsh", // or "bash", "fish", etc.
+  "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "alacritty",
@@ -99,7 +99,6 @@
   "editor.renderLineHighlight": "all",
   "editor.minimap.autohide": "mouseover",
   "editor.minimap.enabled": false,
-  "explorer.compactFolders": false,
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.cursorStyle": "block",
@@ -121,6 +120,7 @@
   "chat.agentSessionsViewLocation": "disabled",
   "chat.viewWelcome.enabled": false,
   "chat.viewSessions.enabled": false,
+  "workbench.sideBar.location": "right",
   // Telemetry
   "redhat.telemetry.enabled": false,
   // Copilot
@@ -168,6 +168,14 @@
   "editor.suggest.showReferences": false,
   "references.preferredLocation": "view",
   "workbench.editor.enablePreview": true,
+  "explorer.openEditors.visible": 99,
+  "explorer.openEditors.minVisible": 10,
+  "explorer.openEditors.sortOrder": "fullPath",
+  "workbench.colorCustomizations": {
+    "list.activeSelectionBackground": "#324576",
+    "list.activeSelectionForeground": "#ffffff",
+    "list.inactiveSelectionBackground": "#2b3c66"
+  },
   //==============
   // Extensions
   //==============
@@ -203,7 +211,7 @@
       "commands": [
         "editor.action.startFindReplaceAction"
       ]
-    }
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -225,8 +233,38 @@
   ],
   "vim.leader": "<space>",
   "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-f>": false
+    // "<C-a>": false,
+    "<C-f>": false,
+    "<A-a>": false,
+    "<A-b>": false,
+    "<A-c>": false,
+    "<A-d>": false,
+    "<A-e>": false,
+    "<A-f>": false,
+    "<A-1>": false,
+    "<A-2>": false,
+    "<A-3>": false,
+    "<A-4>": false,
+    "<A-5>": false,
+    "<A-6>": false,
+    "<A-7>": false,
+    "<A-8>": false,
+    "<A-9>": false,
+    "<M-a>": false,
+    "<M-b>": false,
+    "<M-c>": false,
+    "<M-d>": false,
+    "<M-e>": false,
+    "<M-f>": false,
+    "<M-1>": false,
+    "<M-2>": false,
+    "<M-3>": false,
+    "<M-4>": false,
+    "<M-5>": false,
+    "<M-6>": false,
+    "<M-7>": false,
+    "<M-8>": false,
+    "<M-9>": false
   },
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
@@ -279,4 +317,32 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
+  "terminal.integrated.hideOnStartup": "never",
+  "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "args": [
+        "-l"
+      ],
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "/bin/zsh",
+      "args": [
+        "-c",
+        "SESSION_NAME=$(basename \"${PWD/-/.}\"); tmux attach -t \"$SESSION_NAME\" || tmux new -s \"$SESSION_NAME\""
+      ]
+    },
+  },
+  "files.associations": {
+    "*.vil": "jsonc"
+  },
+  "clangd.detectExtensionConflicts": false,
+  "[c]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "explorer.excludeGitIgnore": true,
+  "keyboard.dispatch": "keyCode",
+  "window.customTitleBarVisibility": "never",
 }

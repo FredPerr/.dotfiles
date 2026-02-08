@@ -20,12 +20,11 @@ style = "Bold Italic"
 
 [window]
 opacity = 0.90
-decorations= "Full"
-startup_mode="Windowed"
+decorations = "Full"
+startup_mode = "Windowed"
 dynamic_padding = true
-padding = { x = 5, y = 5}
+padding = { x = 5, y = 5 }
 
-# Causing a bug on macOS
 [shell]
 program = "/opt/homebrew/bin/tmux"
 
@@ -35,6 +34,8 @@ program = "/opt/homebrew/bin/tmux"
 #  ]
 
 [[hints.enabled]]
-regex = "[^ ]+\\.rs:\\d+:\\d+"
-command = { program = "nvim" }
-mouse = { enabled = false }
+# Matches file.ext:line or file.ext:line:column
+regex = "[^ ]+\\.[a-z0-9]+:\\d+(?::\\d+)?"
+command = { program = "code", args = ["--goto"] }
+mouse = { enabled = true, mods = "Command" }
+post_processing = true

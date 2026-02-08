@@ -52,12 +52,12 @@
     "when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus || terminalFocus)"
   },
   {
-    "command": "workbench.action.focusPreviousGroup",
+    "command": "workbench.action.focusLeftGroup",
     "key": "ctrl+h",
     "when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus || terminalFocus)"
   },
   {
-    "command": "workbench.action.focusNextGroup",
+    "command": "workbench.action.focusRightGroup",
     "key": "ctrl+l",
     "when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus || terminalFocus)"
   },
@@ -88,7 +88,6 @@
     "key": "ctrl+shift+l",
     "when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus || terminalFocus)"
   },
-
   // Find in files
   {
     "command": "workbench.action.findInFiles",
@@ -97,7 +96,10 @@
   },
   {
     "args": {
-      "commands": ["workbench.view.scm", "workbench.scm.focus"]
+      "commands": [
+        "workbench.view.scm",
+        "workbench.scm.focus"
+      ]
     },
     "command": "runCommands",
     "key": "space g g",
@@ -134,15 +136,24 @@
   // Sidebar toggling
   {
     "args": {
-      "commands": ["workbench.files.action.focusFilesExplorer"]
+      "commands": [
+        "workbench.files.action.focusFilesExplorer"
+      ]
     },
     "command": "runCommands",
     "key": "space p v",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
   },
   {
+    "command": "workbench.action.splitEditorRight",
+    "key": "space v",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
     "args": {
-      "commands": ["workbench.action.focusActiveEditorGroup"]
+      "commands": [
+        "workbench.action.focusActiveEditorGroup"
+      ]
     },
     "command": "runCommands",
     "key": "space p v",
@@ -152,12 +163,6 @@
     "command": "workbench.action.toggleSidebarVisibility",
     "key": "ctrl+e",
     "when": "vim.mode != 'Insert'"
-  },
-  // Terminal toggling
-  {
-    "command": "workbench.action.terminal.toggleTerminal",
-    "key": "space p t",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !terminalFocus"
   },
   // Code actions
   {
@@ -252,7 +257,6 @@
     "key": "s",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
-
   // TODO: remember this and configure better later
   {
     "args": {
@@ -270,7 +274,9 @@
   {
     // Mark a file to use in the context of copilot
     "args": {
-      "commands": ["github.copilot.chat.attachSelection"]
+      "commands": [
+        "github.copilot.chat.attachSelection"
+      ]
     },
     "command": "runCommands",
     "key": "m",
@@ -279,7 +285,9 @@
   // Open a file
   {
     "args": {
-      "commands": ["explorer.openAndPassFocus"]
+      "commands": [
+        "explorer.openAndPassFocus"
+      ]
     },
     "command": "runCommands",
     "key": "enter",
@@ -292,7 +300,7 @@
   },
   // Terminal
   {
-    "command": "workbench.action.createTerminalEditorSameGroup",
+    "command": "workbench.action.terminal.openNativeConsole",
     "key": "space t",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !terminalFocus"
   },
@@ -327,5 +335,10 @@
     "key": "ctrl+s",
     "command": "-extension.vim_ctrl+s",
     "when": "editorTextFocus && vim.active && vim.use<C-s> && !inDebugRepl"
+  },
+  {
+    "key": "alt+c c",
+    "command": "-extension.colorHelper.convert",
+    "when": "editorTextFocus"
   }
 ]
