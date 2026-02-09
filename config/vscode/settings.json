@@ -112,7 +112,6 @@
   "workbench.editor.showTabs": "none",
   "breadcrumbs.enabled": false,
   "editor.stickyScroll.enabled": false,
-  "workbench.activityBar.location": "top",
   "editor.inlineSuggest.showToolbar": "never",
   "workbench.editor.editorActionsLocation": "hidden",
   "workbench.layoutControl.enabled": false,
@@ -120,7 +119,7 @@
   "chat.agentSessionsViewLocation": "disabled",
   "chat.viewWelcome.enabled": false,
   "chat.viewSessions.enabled": false,
-  "workbench.sideBar.location": "right",
+  "workbench.sideBar.location": "left",
   // Telemetry
   "redhat.telemetry.enabled": false,
   // Copilot
@@ -344,6 +343,7 @@
   },
   "explorer.excludeGitIgnore": true,
   "keyboard.dispatch": "keyCode",
-  "window.customTitleBarVisibility": "never",
   "atlascode.rovodev.showEntitlementNotifications": false,
+  "workbench.activityBar.location": "top",
+  "window.customTitleBarVisibility": "never",
 }
