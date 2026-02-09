@@ -345,4 +345,5 @@
   "explorer.excludeGitIgnore": true,
   "keyboard.dispatch": "keyCode",
   "window.customTitleBarVisibility": "never",
+  "atlascode.rovodev.showEntitlementNotifications": false,
 }
