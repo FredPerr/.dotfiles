@@ -1,10 +1,29 @@
 [
-  // Project opening
+  // Project opening / closing
   {
-    // projectManager.listProjects
-    "command": "projectManager.listProjects",
+    "command": "projectManager.listProjectsNewWindow",
     "key": "space p p",
     "when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "command": "workbench.action.closeWindow",
+    "key": "space p x",
+    "when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus)"
+  },
+  // Extract to components
+  {
+    "command": "extension.react-refactor.extractToFunction",
+    "key": "space p c",
+    "when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space p e",
+    "command": "editor.action.codeAction",
+    "args": {
+      "kind": "refactor.extract", // This targets the selection, not the file
+      "apply": "never" // 'never' is better here so you can pick the exact extraction type
+    },
+    "when": "vim.mode != 'Insert' && editorTextFocus"
   },
   {
     // Trigger suggestions/intellisense
@@ -175,7 +194,7 @@
   {
     "command": "editor.action.codeAction",
     "key": "space c a",
-    "when": "vim.mode=='Normal' && editorTextFocus"
+    "when": "(vim.mode=='Normal' || vim.mode=='Visual') && (editorTextFocus || !inputFocus)"
   },
   // Coding
   {

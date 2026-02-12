@@ -48,6 +48,7 @@ ms-vscode.cpptools-themes
 ms-vscode.makefile-tools
 ms-vscode.vscode-typescript-next
 naumovs.color-highlight
+planbcoding.vscode-react-refactor
 redhat.java
 redhat.vscode-xml
 redhat.vscode-yaml
