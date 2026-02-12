@@ -168,8 +168,11 @@
   "references.preferredLocation": "view",
   "workbench.editor.enablePreview": true,
   "explorer.openEditors.visible": 99,
+  "editor.quickSuggestionsDelay": 150,
+  "editor.suggest.filterGraceful": false,
   "explorer.openEditors.minVisible": 10,
-  "explorer.openEditors.sortOrder": "fullPath",
+  "explorer.openEditors.sortOrder": "editorOrder",
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "workbench.colorCustomizations": {
     "list.activeSelectionBackground": "#324576",
     "list.activeSelectionForeground": "#ffffff",
@@ -346,6 +349,7 @@
   "atlascode.rovodev.showEntitlementNotifications": false,
   "workbench.activityBar.location": "top",
   "window.customTitleBarVisibility": "never",
+  "atlascode.bitbucket.pipelines.monitorEnabled": false,
   "json.schemaDownload.trustedDomains": {
     "https://schemastore.azurewebsites.net/": true,
     "https://raw.githubusercontent.com/": true,
