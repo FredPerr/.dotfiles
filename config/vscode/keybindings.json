@@ -173,7 +173,7 @@
   {
     "command": "workbench.action.splitEditorRight",
     "key": "space v",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
+    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus"
   },
   {
     "args": {
