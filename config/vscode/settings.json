@@ -30,6 +30,8 @@
   "[javascriptreact]": {
     "editor.autoClosingTags": true
   },
+  // Not yet ready for prime time, and causes more issues than it solves
+  // "typescript.experimental.useTsgo": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
