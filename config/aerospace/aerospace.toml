@@ -22,7 +22,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 accordion-padding = 0
 
 # Possible values: tiles|accordion     
-default-root-container-layout = 'tiles'
+default-root-container-layout = 'accordion'
 
 # Possible values: horizontal|vertical|auto
 # 'auto' means: wide monitor (anything wider than high) gets horizontal orientation,
@@ -142,13 +142,13 @@ alt-r = 'workspace 6 --fail-if-noop'
 alt-s = 'workspace 7 --fail-if-noop'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 
-alt-shift-g = 'move-node-to-workspace 1'
-alt-shift-m = 'move-node-to-workspace 2'
-alt-shift-n = 'move-node-to-workspace 3'
-alt-shift-o = 'move-node-to-workspace 4'
-alt-shift-p = 'move-node-to-workspace 5'
-alt-shift-q = 'move-node-to-workspace 6'
-alt-shift-r = 'move-node-to-workspace 7'
+alt-shift-m = 'move-node-to-workspace 1'
+alt-shift-n = 'move-node-to-workspace 2'
+alt-shift-o = 'move-node-to-workspace 3'
+alt-shift-p = 'move-node-to-workspace 4'
+alt-shift-q = 'move-node-to-workspace 5'
+alt-shift-r = 'move-node-to-workspace 6'
+alt-shift-s = 'move-node-to-workspace 7'
 
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
@@ -183,10 +183,12 @@ alt-shift-l = ['join-with right', 'mode main']
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace 1'
+# run = ['move-node-to-workspace 1', 'layout accordion']
 
 [[on-window-detected]]
 if.app-id = 'org.mozilla.firefox'
 run = 'move-node-to-workspace 1'
+# run = ['move-node-to-workspace 1', 'layout accordion']
 
 # === (Workspace 2) ===
 # Coding (IDE, API tester)

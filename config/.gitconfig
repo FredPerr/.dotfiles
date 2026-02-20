@@ -16,6 +16,7 @@
     unstage = reset HARD --
     last = log -1 HEAD
     lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
+	pub = push -u origin HEAD
 [filter "lfs"]
     clean = git-lfs clean -- %f
 [gpg]
@@ -24,3 +25,6 @@
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [commit]
 	gpgsign = true
+[push]
+	autoSetupRemote = true
+	default = current

@@ -30,6 +30,8 @@
   "[javascriptreact]": {
     "editor.autoClosingTags": true
   },
+  // Not yet ready for prime time, and causes more issues than it solves
+  // "typescript.experimental.useTsgo": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -112,7 +114,6 @@
   "workbench.editor.showTabs": "none",
   "breadcrumbs.enabled": false,
   "editor.stickyScroll.enabled": false,
-  "workbench.activityBar.location": "top",
   "editor.inlineSuggest.showToolbar": "never",
   "workbench.editor.editorActionsLocation": "hidden",
   "workbench.layoutControl.enabled": false,
@@ -120,7 +121,7 @@
   "chat.agentSessionsViewLocation": "disabled",
   "chat.viewWelcome.enabled": false,
   "chat.viewSessions.enabled": false,
-  "workbench.sideBar.location": "right",
+  "workbench.sideBar.location": "left",
   // Telemetry
   "redhat.telemetry.enabled": false,
   // Copilot
@@ -169,8 +170,11 @@
   "references.preferredLocation": "view",
   "workbench.editor.enablePreview": true,
   "explorer.openEditors.visible": 99,
+  "editor.quickSuggestionsDelay": 150,
+  "editor.suggest.filterGraceful": false,
   "explorer.openEditors.minVisible": 10,
-  "explorer.openEditors.sortOrder": "fullPath",
+  "explorer.openEditors.sortOrder": "editorOrder",
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "workbench.colorCustomizations": {
     "list.activeSelectionBackground": "#324576",
     "list.activeSelectionForeground": "#ffffff",
@@ -344,5 +348,16 @@
   },
   "explorer.excludeGitIgnore": true,
   "keyboard.dispatch": "keyCode",
+  "atlascode.rovodev.showEntitlementNotifications": false,
+  "workbench.activityBar.location": "top",
   "window.customTitleBarVisibility": "never",
+  "atlascode.bitbucket.pipelines.monitorEnabled": false,
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://biomejs.dev": true
+  },
 }
