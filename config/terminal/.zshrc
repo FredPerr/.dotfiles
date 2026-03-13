@@ -44,3 +44,5 @@ add-zsh-hook chpwd set_tmux_title
 
 # Set initial title on startup
 set_tmux_title
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"

@@ -93,8 +93,13 @@
   "files.exclude": {
     "**/.git": false
   },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.git": true
+  },
+  "search.useIgnoreFiles": true,
   // Accessibility & Visuals
-  "editor.fontSize": 16,
+  "editor.fontSize": 14,
   "editor.cursorBlinking": "solid",
   "editor.accessibilitySupport": "off",
   "editor.fontFamily": "FiraCode Nerd Font, monospace",
@@ -108,7 +113,7 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.tree.indent": 12,
   "workbench.tree.renderIndentGuides": "onHover",
-  "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorTheme": "Solarized Dark",
   "accessibility.verbosity.inlineChat": false,
   "window.commandCenter": false,
   "workbench.editor.showTabs": "none",
@@ -137,8 +142,8 @@
   "chat.editRequests": "inline",
   "chat.implicitContext.suggestedContext": true,
   "chat.mcp.access": "registry",
-  "chat.notifyWindowOnConfirmation": false,
-  "chat.notifyWindowOnResponseReceived": false,
+  "chat.notifyWindowOnConfirmation": "off",
+  "chat.notifyWindowOnResponseReceived": "off",
   "chat.restoreLastPanelSession": false,
   "chat.viewTitle.enabled": false,
   "chat.tools.terminal.terminalProfile.osx": {
@@ -153,13 +158,13 @@
   // Languages and code intelligence
   "editor.wordBasedSuggestions": "off",
   "editor.snippetSuggestions": "none",
-  "typescript.referencesCodeLens.enabled": true,
-  "javascript.referencesCodeLens.enabled": true,
-  "typescript.preferences.preferTypeOnlyAutoImports": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "typescript.autoClosingTags": true,
-  "typescript.inlayHints.parameterNames.enabled": "literals",
+  "ts.referencesCodeLens.enabled": true,
+  "js.referencesCodeLens.enabled": true,
+  "ts.preferences.preferTypeOnlyAutoImports": false,
+  "js.updateImportsOnFileMove.enabled": "always",
+  "ts.updateImportsOnFileMove.enabled": "always",
+  "ts.autoClosingTags": true,
+  "ts.inlayHints.parameterNames.enabled": "literals",
   "java.referencesCodeLens.enabled": true,
   "editor.inlayHints.enabled": "on",
   "editor.gotoLocation.multipleDefinitions": "goto",
@@ -360,4 +365,13 @@
     "https://json-schema.org/": true,
     "https://biomejs.dev": true
   },
+  "atlascode.jira.lastCreatePreSelectedValues": {
+    "siteId": "8e5cbef7-62ce-434f-a380-dc3b3e2f21f7",
+    "projectKey": "BIV",
+    "issueTypeId": ""
+  },
+  "githubPullRequests.pullBranch": "never",
+  "projectManager.git.baseFolders": [
+    "/Users/fredperr/Projects"
+  ],
 }
