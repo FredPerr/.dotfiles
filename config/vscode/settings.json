@@ -94,8 +94,7 @@
     "**/.git": false
   },
   "search.exclude": {
-    "**/node_modules": true,
-    "**/.git": true
+    "**/node_modules": true
   },
   "search.useIgnoreFiles": true,
   // Accessibility & Visuals
@@ -113,7 +112,7 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.tree.indent": 12,
   "workbench.tree.renderIndentGuides": "onHover",
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Atom One Dark",
   "accessibility.verbosity.inlineChat": false,
   "window.commandCenter": false,
   "workbench.editor.showTabs": "none",
@@ -351,7 +350,6 @@
   "[c]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
   },
-  "explorer.excludeGitIgnore": true,
   "keyboard.dispatch": "keyCode",
   "atlascode.rovodev.showEntitlementNotifications": false,
   "workbench.activityBar.location": "top",
@@ -373,5 +371,15 @@
   "githubPullRequests.pullBranch": "never",
   "projectManager.git.baseFolders": [
     "/Users/fredperr/Projects"
+  ],
+  "githubPullRequests.createOnPublishBranch": "never",
+  "js/ts.referencesCodeLens.enabled": true,
+  "js/ts.referencesCodeLens.showOnAllFunctions": true,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "update.showReleaseNotes": false,
+  "projectManager.any.ignoredFolders": [
+    "node_modules",
+    "typings",
+    "test"
   ],
 }

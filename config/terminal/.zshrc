@@ -46,3 +46,4 @@ add-zsh-hook chpwd set_tmux_title
 set_tmux_title
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+eval "$(uv generate-shell-completion zsh)"
