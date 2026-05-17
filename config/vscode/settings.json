@@ -140,7 +140,6 @@
   "chat.agent.thinking.generateTitles": false,
   "chat.editRequests": "inline",
   "chat.implicitContext.suggestedContext": true,
-  "chat.mcp.access": "registry",
   "chat.notifyWindowOnConfirmation": "off",
   "chat.notifyWindowOnResponseReceived": "off",
   "chat.restoreLastPanelSession": false,
@@ -382,4 +381,5 @@
     "typings",
     "test"
   ],
+  "chat.mcp.gallery.enabled": true,
 }

@@ -47,3 +47,7 @@ set_tmux_title
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
 eval "$(uv generate-shell-completion zsh)"
+eval "$(~/.local/bin/mise activate zsh)"
+eval "$(mise activate zsh)"
+eval "$(~/.local/bin/mise activate zsh)"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"

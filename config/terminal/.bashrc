@@ -7,3 +7,4 @@
 export OPENSSL_ROOT_DIR=/opt/homebrew/opt/openssl@3
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)"
+eval "$(~/.local/bin/mise activate bash)"
