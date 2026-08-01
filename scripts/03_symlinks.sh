@@ -52,6 +52,7 @@ symlink "$CONFIG_DIR/vscode/keybindings.json" "$VSCODE_DEST_DIR/keybindings.json
 KIRO_DEST_DIR="$HOME/Library/Application Support/Kiro/User"
 symlink "$CONFIG_DIR/kiro/settings.json" "$KIRO_DEST_DIR/settings.json"
 symlink "$CONFIG_DIR/kiro/keybindings.json" "$KIRO_DEST_DIR/keybindings.json"
+symlink "$CONFIG_DIR/kiro/steering" "$HOME/.kiro/steering"
 
 # --- Tmux ---------------------------------------------------------------
 symlink "$CONFIG_DIR/tmux" "$HOME/.config/tmux"

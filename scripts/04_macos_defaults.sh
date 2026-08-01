@@ -64,6 +64,9 @@ defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool 
 # --- Chrome -------------------------------------------------------------
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
 
+# --- Docker Desktop -----------------------------------------------------
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Docker.app", hidden:true}' 2>/dev/null || true
+
 # --- Restart affected apps ----------------------------------------------
 info "Restarting affected applications..."
 for app in "Finder" "Dock" "SystemUIServer"; do

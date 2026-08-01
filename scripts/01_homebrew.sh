@@ -35,6 +35,9 @@ fi
 # 2. Process Brewfile
 # ------------------------------------------------------------------------------
 if [[ -f "$BREWFILE_PATH" ]]; then
+  info "Trusting third-party taps..."
+  brew trust nikitabobko/tap 2>/dev/null || true
+
   info "Installing dependencies from Brewfile..."
   brew bundle --file="$BREWFILE_PATH"
   success "Brewfile dependencies installed!"
