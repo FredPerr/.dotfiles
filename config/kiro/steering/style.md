@@ -4,13 +4,11 @@ inclusion: always
 # Personal Coding Style & Preferences
 
 ## Code Formatting
-- Always use spaces instead of tabs (2-space indentation for TS/JS, 4 for Python).
 - Prefer functional components over class components in React.
 - Always use descriptive variable names rather than short abbreviations (e.g., `userRepository` instead of `userRepo`).
 
 ## General Behavior
 - Keep explanations brief and concise, don't add commments unless code it is really hard to understand the intent of the code. 
-- If writing code changes, always double-check for edge cases and potential security flaws before outputting.
 - When there are multiple possible paths and are not sure about which one to take, ask me as I am the orchestrator/architect.
 
 ## Context Finding
