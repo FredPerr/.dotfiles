@@ -1,0 +1,2 @@
+alias a="assume"
+alias ac="assume -c"

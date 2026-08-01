@@ -1,0 +1,98 @@
+{
+  "kiroAgent.configureMCP": "Disabled",
+  "security.workspace.trust.untrustedFiles": "open",
+  "atlascode.rovodev.showEntitlementNotifications": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "kiroAgent.trustedCommands": [
+    "mkdir *",
+    "env *",
+    "grep *",
+    "ls *",
+    "npx *",
+    "head *",
+    "cat *",
+    "pnpm *",
+    "git log *",
+    "node_modules/.bin/biome *",
+    "git diff *",
+    "git show *",
+    "yarn test *",
+    "yarn test:nowatch *",
+    "LOG_LEVEL=NONE npx vitest run 2>&1 | tail -150",
+    "node *",
+    "yarn synth:dev *",
+    "sed *",
+    "yarn biome *",
+    "yarn lint *",
+    "aws-vault exec *",
+    "git status",
+    "cd *",
+    "git branch --show-current"
+  ],
+  "editor.gotoLocation.multipleReferences": "goto",
+  "kiroAgent.modelSelection": "auto",
+  "kiroAgent.enableTabAutocomplete": true,
+  "editor.gotoLocation.alternativeReferenceCommand": "editor.action.goToReferences",
+  "typescript.referencesCodeLens.enabled": true,
+  "references.preferredLocation": "view",
+  "files.autoSave": "afterDelay",
+  "vim.useSystemClipboard": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "editor.minimap.autohide": "mouseover",
+  "atlascode.bitbucket.pipelines.monitorEnabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "kiroAgent.trustedTools": [
+    "web_fetch",
+    "remote_web_search"
+  ],
+  "go.toolsManagement.autoUpdate": true,
+  "diffEditor.renderSideBySide": false,
+  "kiroAgent.trust.defaultScope": "user",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.panel.showLabels": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "atlascode.jira.lastCreatePreSelectedValues": {
+    "siteId": "8e5cbef7-62ce-434f-a380-dc3b3e2f21f7",
+    "projectKey": "AVSG",
+    "issueTypeId": ""
+  },
+  "atlascode.jira.explorer.monitorEnabled": false,
+  "atlascode.jira.explorer.enabled": false,
+  "atlascode.jira.hover.enabled": false,
+  "atlascode.jira.todoIssues.enabled": false,
+  "yaml.disableSchemaDetection": [],
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.enableSmartCommit": true,
+  "githubPullRequests.terminalLinksHandler": "github",
+  "atlascode.bitbucket.explorer.nestFilesEnabled": false,
+  "workbench.tree.indent": 12,
+  "rust-analyzer.testExplorer": true,
+  "rust-analyzer.diagnostics.styleLints.enable": true,
+  // Ensure CodeLens is enabled globally in VS Code
+  "editor.codeLens": true,
+
+  // Enable master lens switch in rust-analyzer
+  "rust-analyzer.lens.enable": true,
+
+  // Enable reference lenses for specific Rust items
+  "rust-analyzer.lens.references.adt.enable": true,         // Structs, Enums, Unions
+  "rust-analyzer.lens.references.enumVariant.enable": true, // Enum variants
+  "rust-analyzer.lens.references.method.enable": true,      // Methods & Functions
+  "rust-analyzer.lens.references.trait.enable": true,       // Traits
+  "rust-analyzer.lens.implementations.enable": true,
+  "diffEditor.hideUnchangedRegions.contextLineCount": 20,
+  "diffEditor.hideUnchangedRegions.minimumLineCount": 20, // Trait/Type Implementations
+  "diffEditor.hideUnchangedRegions.enabled": false
+}
