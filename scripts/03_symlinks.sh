@@ -53,6 +53,7 @@ KIRO_DEST_DIR="$HOME/Library/Application Support/Kiro/User"
 symlink "$CONFIG_DIR/kiro/settings.json" "$KIRO_DEST_DIR/settings.json"
 symlink "$CONFIG_DIR/kiro/keybindings.json" "$KIRO_DEST_DIR/keybindings.json"
 symlink "$CONFIG_DIR/kiro/steering" "$HOME/.kiro/steering"
+symlink "$CONFIG_DIR/kiro/agents" "$HOME/.kiro/agents"
 
 # --- Tmux ---------------------------------------------------------------
 symlink "$CONFIG_DIR/tmux" "$HOME/.config/tmux"
