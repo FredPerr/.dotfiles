@@ -1,0 +1,34 @@
+create-workspace() {
+  if [ -z "$1" ]; then
+    echo "Usage: create-workspace <feature-name>"
+    return 1
+  fi
+
+  FEATURE_NAME="$1"
+  
+  WS_DIR="$(pwd)"
+  MAIN_FRONTEND="$WS_DIR/frontend"
+  MAIN_BACKEND="$WS_DIR/backend"
+  MAIN_ENGINE="$WS_DIR/engine"
+  TARGET_DIR="$WS_DIR/.worktrees/$FEATURE_NAME"
+
+  if [ ! -d "$MAIN_FRONTEND/.git" ] || [ ! -d "$MAIN_BACKEND/.git" ] || [ ! -d "$MAIN_ENGINE/.git" ]; then
+    echo "Error: Must be run from 'project' folder containing frontend and backend repos."
+    return 1
+  fi
+
+  mkdir -p "$TARGET_DIR"
+
+  echo "Creating frontend worktree..."
+  git -C "$MAIN_FRONTEND" worktree add "$TARGET_DIR/frontend" -b "$FEATURE_NAME"
+
+  echo "Creating backend worktree..."
+  git -C "$MAIN_BACKEND" worktree add "$TARGET_DIR/backend" -b "$FEATURE_NAME"
+
+  echo "Creating engine worktree..."
+  git -C "$MAIN_ENGINE" worktree add "$TARGET_DIR/engine" -b "$FEATURE_NAME"
+
+  echo "Workspace created at: $TARGET_DIR"
+
+  kiro $TARGET_DIR
+}

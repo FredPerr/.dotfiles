@@ -1,0 +1,45 @@
+remove-workspace() {
+  if [ -z "$1" ]; then
+    echo "Usage: remove-workspace <feature-name> [--delete-branches]"
+    return 1
+  fi
+
+  FEATURE_NAME="$1"
+  DELETE_BRANCHES="$2"
+
+  WS_DIR="$(pwd)"
+  MAIN_FRONTEND="$WS_DIR/frontend"
+  MAIN_BACKEND="$WS_DIR/backend"
+  MAIN_ENGINE="$WS_DIR/engine"
+  TARGET_DIR="$WS_DIR/.worktrees/$FEATURE_NAME"
+
+  if [ ! -d "$MAIN_FRONTEND/.git" ] || [ ! -d "$MAIN_BACKEND/.git" ] || [ ! -d "$MAIN_ENGINE/.git" ]; then
+    echo "Error: Must be run from 'project' folder containing frontend, backend, and engine repos."
+    return 1
+  fi
+
+  if [ ! -d "$TARGET_DIR" ]; then
+    echo "Error: Worktree directory '$TARGET_DIR' does not exist."
+    return 1
+  fi
+
+  echo "Removing worktrees..."
+  [ -d "$TARGET_DIR/frontend" ] && git -C "$MAIN_FRONTEND" worktree remove "$TARGET_DIR/frontend" --force
+  [ -d "$TARGET_DIR/backend" ]  && git -C "$MAIN_BACKEND" worktree remove "$TARGET_DIR/backend" --force
+  [ -d "$TARGET_DIR/engine" ]   && git -C "$MAIN_ENGINE" worktree remove "$TARGET_DIR/engine" --force
+
+  rm -rf "$TARGET_DIR"
+
+  git -C "$MAIN_FRONTEND" worktree prune
+  git -C "$MAIN_BACKEND" worktree prune
+  git -C "$MAIN_ENGINE" worktree prune
+
+  echo "Workspace removed: $TARGET_DIR"
+
+  if [ "$DELETE_BRANCHES" = "--delete-branches" ] || [ "$DELETE_BRANCHES" = "-d" ]; then
+    echo "Deleting local branches '$FEATURE_NAME'..."
+    git -C "$MAIN_FRONTEND" branch -D "$FEATURE_NAME" 2>/dev/null || true
+    git -C "$MAIN_BACKEND" branch -D "$FEATURE_NAME" 2>/dev/null || true
+    git -C "$MAIN_ENGINE" branch -D "$FEATURE_NAME" 2>/dev/null || true
+  fi
+}

@@ -94,5 +94,7 @@
   "rust-analyzer.lens.implementations.enable": true,
   "diffEditor.hideUnchangedRegions.contextLineCount": 20,
   "diffEditor.hideUnchangedRegions.minimumLineCount": 20, // Trait/Type Implementations
-  "diffEditor.hideUnchangedRegions.enabled": false
+  "diffEditor.hideUnchangedRegions.enabled": false,
+  "kiroAgent.trust.defaultPattern": "full",
+  "git.openRepositoryInParentFolders": "never"
 }

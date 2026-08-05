@@ -28,6 +28,7 @@ info "Creating symlinks..."
 symlink "$CONFIG_DIR/zsh/.zshrc" "$HOME/.zshrc"
 symlink "$CONFIG_DIR/zsh/.zshenv" "$HOME/.zshenv"
 symlink "$CONFIG_DIR/terminal/.aliases" "$HOME/.aliases"
+symlink "$CONFIG_DIR/zsh/functions" "$HOME/.zsh_functions"
 
 # --- SSH ----------------------------------------------------------------
 symlink "$CONFIG_DIR/ssh/config" "$HOME/.ssh/config"
