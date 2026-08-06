@@ -24,3 +24,5 @@ export PATH="$PATH:$GOPATH/bin"
 
 # Cargo
 [[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
+
+alias assume=". assume"
