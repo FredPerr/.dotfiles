@@ -5,7 +5,7 @@ open-workspace() {
   fi
 
   if ! command -v fzf &> /dev/null; then
-    echo "Error: 'fzf' is required for interactive branch selection. Install it via 'brew install fzf'."
+    echo "Error: 'fzf' is required for interactive branch selection. Install via 'brew install fzf'."
     return 1
   fi
 
@@ -26,20 +26,18 @@ open-workspace() {
   git -C "$MAIN_BACKEND" fetch --all --prune
   git -C "$MAIN_ENGINE" fetch --all --prune
 
-  # Helper function to prompt with fzf and fall back to default branch on ESC/empty selection
   select_or_default() {
     local repo_dir="$1"
     local repo_name="$2"
     local selected_branch
 
-    echo "\n--- Select $repo_name branch (Press ESC to use default branch) ---"
-    selected_branch=$(git -C "$repo_dir" branch -a | sed 's/remotes\/origin\///' | tr -d ' *' | sort -u | fzf --prompt="$repo_name Branch > ")
+    echo "\n--- Select $repo_name branch (Press ESC to use default branch) ---" >&2
+    selected_branch=$(git -C "$repo_dir" branch -a | sed -e 's/remotes\/origin\///' -e 's/^\* //' -e 's/^  //' | sort -u | fzf --prompt="$repo_name Branch > ")
 
     if [ -z "$selected_branch" ]; then
-      # Automatically detect default branch (e.g. develop or main)
       selected_branch=$(git -C "$repo_dir" symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@')
-      [ -z "$selected_branch" ] && selected_branch="develop"
-      echo "No branch selected for $repo_name. Falling back to default: '$selected_branch'"
+      [ -z "$selected_branch" ] && selected_branch="main"
+      echo "No branch selected for $repo_name. Falling back to default: '$selected_branch'" >&2
     fi
 
     echo "$selected_branch"
@@ -49,23 +47,23 @@ open-workspace() {
   BE_BRANCH=$(select_or_default "$MAIN_BACKEND" "BACKEND")
   ENG_BRANCH=$(select_or_default "$MAIN_ENGINE" "ENGINE")
 
-  mkdir -p "$TARGET_DIR"
-
-  # Helper function to add worktree safely (whether branch exists locally or remotely)
   add_repo_worktree() {
     local repo_dir="$1"
     local target_path="$2"
     local branch="$3"
 
-    if git -C "$repo_dir" show-ref --verify --quiet "refs/heads/$branch"; then
-      # Local branch exists
+    # Remove target directory if it exists empty so git worktree doesn't reject it
+    rm -rf "$target_path"
+
+    # 1. Local branch exists
+    if git -C "$repo_dir" rev-parse --verify --quiet "refs/heads/$branch" >/dev/null; then
       git -C "$repo_dir" worktree add "$target_path" "$branch"
-    elif git -C "$repo_dir" show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-      # Remote branch exists, checkout tracking branch
+    # 2. Remote branch exists (create local branch to track it)
+    elif git -C "$repo_dir" rev-parse --verify --quiet "refs/remotes/origin/$branch" >/dev/null; then
       git -C "$repo_dir" worktree add -b "$branch" "$target_path" "origin/$branch"
+    # 3. Fallback: direct checkout
     else
-      # Fall back to checking out commit/ref directly in detached state
-      git -C "$repo_dir" worktree add --detach "$target_path" "$branch"
+      git -C "$repo_dir" worktree add "$target_path" "$branch"
     fi
   }
 
@@ -80,5 +78,5 @@ open-workspace() {
   echo " - Backend:  $BE_BRANCH"
   echo " - Engine:   $ENG_BRANCH"
 
-  kiro $TARGET_DIR
+  kiro "$TARGET_DIR"
 }
