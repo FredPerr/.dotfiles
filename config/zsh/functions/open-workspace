@@ -29,10 +29,17 @@ open-workspace() {
   select_or_default() {
     local repo_dir="$1"
     local repo_name="$2"
-    local selected_branch
+    local fzf_output selected_branch query
 
-    echo "\n--- Select $repo_name branch (Press ESC to use default branch) ---" >&2
-    selected_branch=$(git -C "$repo_dir" branch -a | sed -e 's/remotes\/origin\///' -e 's/^\* //' -e 's/^  //' | sort -u | fzf --prompt="$repo_name Branch > ")
+    echo "\n--- Select $repo_name branch (type a new name to create, ESC for default) ---" >&2
+    fzf_output=$(git -C "$repo_dir" branch -a | sed -e 's/remotes\/origin\///' -e 's/^\* //' -e 's/^  //' | sort -u | fzf --print-query --prompt="$repo_name Branch > " 2>/dev/tty)
+
+    query=$(echo "$fzf_output" | sed -n '1p')
+    selected_branch=$(echo "$fzf_output" | sed -n '2p')
+
+    if [ -z "$selected_branch" ] && [ -n "$query" ]; then
+      selected_branch="$query"
+    fi
 
     if [ -z "$selected_branch" ]; then
       selected_branch=$(git -C "$repo_dir" symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@')
@@ -51,19 +58,18 @@ open-workspace() {
     local repo_dir="$1"
     local target_path="$2"
     local branch="$3"
+    local default_branch
 
-    # Remove target directory if it exists empty so git worktree doesn't reject it
     rm -rf "$target_path"
 
-    # 1. Local branch exists
     if git -C "$repo_dir" rev-parse --verify --quiet "refs/heads/$branch" >/dev/null; then
       git -C "$repo_dir" worktree add "$target_path" "$branch"
-    # 2. Remote branch exists (create local branch to track it)
     elif git -C "$repo_dir" rev-parse --verify --quiet "refs/remotes/origin/$branch" >/dev/null; then
       git -C "$repo_dir" worktree add -b "$branch" "$target_path" "origin/$branch"
-    # 3. Fallback: direct checkout
     else
-      git -C "$repo_dir" worktree add "$target_path" "$branch"
+      default_branch=$(git -C "$repo_dir" symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@')
+      [ -z "$default_branch" ] && default_branch="main"
+      git -C "$repo_dir" worktree add -b "$branch" "$target_path" "origin/$default_branch"
     fi
   }
 

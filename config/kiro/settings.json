@@ -96,5 +96,6 @@
   "diffEditor.hideUnchangedRegions.minimumLineCount": 20, // Trait/Type Implementations
   "diffEditor.hideUnchangedRegions.enabled": false,
   "kiroAgent.trust.defaultPattern": "full",
-  "git.openRepositoryInParentFolders": "never"
+  "git.openRepositoryInParentFolders": "never",
+  "diffEditor.ignoreTrimWhitespace": true
 }
