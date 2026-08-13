@@ -31,7 +31,7 @@
   ],
   "editor.gotoLocation.multipleReferences": "goto",
   "kiroAgent.modelSelection": "auto",
-  "kiroAgent.enableTabAutocomplete": true,
+  "kiroAgent.enableTabAutocomplete": false,
   "editor.gotoLocation.alternativeReferenceCommand": "editor.action.goToReferences",
   "typescript.referencesCodeLens.enabled": true,
   "references.preferredLocation": "view",
@@ -75,6 +75,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "git.enableSmartCommit": true,
+  "git.ignoredRepositories": ["./worktrees"],
   "githubPullRequests.terminalLinksHandler": "github",
   "atlascode.bitbucket.explorer.nestFilesEnabled": false,
   "workbench.tree.indent": 12,
@@ -97,5 +98,14 @@
   "diffEditor.hideUnchangedRegions.enabled": false,
   "kiroAgent.trust.defaultPattern": "full",
   "git.openRepositoryInParentFolders": "never",
-  "diffEditor.ignoreTrimWhitespace": true
+  "diffEditor.ignoreTrimWhitespace": true,
+  "explorer.confirmPasteNative": false,
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://biomejs.dev": true
+  }
 }
