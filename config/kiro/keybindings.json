@@ -228,7 +228,7 @@
   {
     "command": "workbench.action.closeActiveEditor",
     "key": "space x",
-    "when": "(vim.mode != 'Insert' && editorTextFocus) || !inputFocus"
+    "when": "(vim.mode != 'Insert' && editorTextFocus) || (!inputFocus && !inChatInput)"
   },
   {
     "command": "editor.action.commentLine",
