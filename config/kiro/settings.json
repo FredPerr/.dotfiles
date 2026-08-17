@@ -49,9 +49,11 @@
     "web_fetch",
     "remote_web_search"
   ],
+  "biome.enabled": true,
   "editor.codeActionsOnSave": {
     "source.organizeImports.biome": "explicit",
-    "source.fixAll.biome": "explicit"
+    "source.fixAll.biome": "explicit",
+    "quickfix.biome": "explicit"
   },
   "go.toolsManagement.autoUpdate": true,
   "diffEditor.renderSideBySide": false,
@@ -112,5 +114,6 @@
     "https://json.schemastore.org/": true,
     "https://json-schema.org/": true,
     "https://biomejs.dev": true
-  }
+  },
+  "atlascode.jira.enabled": false
 }
