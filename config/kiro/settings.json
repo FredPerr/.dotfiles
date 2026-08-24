@@ -57,11 +57,11 @@
   },
   "go.toolsManagement.autoUpdate": true,
   "diffEditor.renderSideBySide": false,
-  "kiroAgent.trust.defaultScope": "user",
+  "kiroAgent.trust.defaultScope": "session",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.panel.showLabels": false,
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
@@ -78,7 +78,7 @@
   "yaml.disableSchemaDetection": [],
   "javascript.updateImportsOnFileMove.enabled": "always",
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "git.enableSmartCommit": true,
   "git.ignoredRepositories": [
@@ -115,5 +115,7 @@
     "https://json-schema.org/": true,
     "https://biomejs.dev": true
   },
-  "atlascode.jira.enabled": false
+  "atlascode.jira.enabled": false,
+  "editor.codeActions.triggerOnFocusChange": true,
+  "workbench.activityBar.location": "top"
 }
