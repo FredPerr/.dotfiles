@@ -119,5 +119,6 @@
   "editor.codeActions.triggerOnFocusChange": true,
   "workbench.activityBar.location": "top",
   "window.commandCenter": false,
-  "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+  "window.zoomLevel": -1
 }
