@@ -117,5 +117,7 @@
   },
   "atlascode.jira.enabled": false,
   "editor.codeActions.triggerOnFocusChange": true,
-  "workbench.activityBar.location": "top"
+  "workbench.activityBar.location": "top",
+  "window.commandCenter": false,
+  "explorer.confirmDelete": false
 }

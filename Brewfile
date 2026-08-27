@@ -29,7 +29,8 @@ cask "google-chrome"
 cask "firefox"
 cask "bruno"
 cask "aerospace"
-cask "docker-desktop"
+cask "orbstack"
+
 
 # Fonts
 cask "font-fira-code-nerd-font"
