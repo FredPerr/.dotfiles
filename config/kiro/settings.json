@@ -120,5 +120,11 @@
   "workbench.activityBar.location": "top",
   "window.commandCenter": false,
   "explorer.confirmDelete": false,
-  "window.zoomLevel": -1
+  "window.zoomLevel": -1,
+  "workbench.colorCustomizations": {
+    "editorOverviewRuler.border": false
+  },
+  "editor.overviewRulerBorder": false,
+  "editor.scrollbar.vertical": "auto",
+  "editor.scrollbar.horizontal": "hidden"
 }
