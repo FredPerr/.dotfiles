@@ -21,6 +21,7 @@ brew "openssl"
 brew "tmux"
 brew "awscli"
 brew "mise"
+brew "biome"
 
 # macOS Desktop Applications (Casks)
 cask "visual-studio-code"

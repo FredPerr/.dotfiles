@@ -3,6 +3,11 @@ Host github.com
     HostName github.com
     User git
 
+# GitLab account
+Host gitlab.com
+    HostName gitlab.com
+    User git
+
 # Gnitic server
 Host matagami
     Hostname 137.184.164.88

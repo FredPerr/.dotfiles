@@ -57,7 +57,11 @@
   },
   "go.toolsManagement.autoUpdate": true,
   "diffEditor.renderSideBySide": false,
+<<<<<<< Updated upstream
   "kiroAgent.trust.defaultScope": "session",
+=======
+  "kiroAgent.trust.defaultScope": "workspace",
+>>>>>>> Stashed changes
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.panel.showLabels": false,
   "[typescript]": {
@@ -75,7 +79,22 @@
   "atlascode.jira.explorer.enabled": false,
   "atlascode.jira.hover.enabled": false,
   "atlascode.jira.todoIssues.enabled": false,
-  "yaml.disableSchemaDetection": [],
+  "yaml.disableSchemaDetection": [
+    "**/docker-compose.yml",
+    "**/docker-compose.yaml",
+    "**/docker-compose.*.yml",
+    "**/docker-compose.*.yaml",
+    "**/compose.yml",
+    "**/compose.yaml",
+    "**/compose.*.yml",
+    "**/compose.*.yaml",
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ],
   "javascript.updateImportsOnFileMove.enabled": "always",
   "[typescriptreact]": {
     "editor.defaultFormatter": "biomejs.biome"
@@ -113,6 +132,7 @@
     "https://www.schemastore.org/": true,
     "https://json.schemastore.org/": true,
     "https://json-schema.org/": true,
+<<<<<<< Updated upstream
     "https://biomejs.dev": true
   },
   "atlascode.jira.enabled": false,
@@ -127,4 +147,9 @@
   "editor.overviewRulerBorder": false,
   "editor.scrollbar.vertical": "auto",
   "editor.scrollbar.horizontal": "hidden"
+=======
+    "https://biomejs.dev": true,
+    "https://schema.tauri.app/config/2": true
+  }
+>>>>>>> Stashed changes
 }
