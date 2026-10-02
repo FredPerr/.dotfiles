@@ -1,0 +1,38 @@
+sync-kiro-permissions() {
+  # Syncs the live Kiro permissions file into the dotfiles repo so command
+  # approvals made in the IDE get version-controlled. Path-independent: it
+  # resolves the dotfiles location from this function file's own symlink,
+  # so the repo can live anywhere.
+
+  local live_file="${KIRO_HOME:-$HOME/.kiro}/settings/permissions.yaml"
+
+  # This function's source file (symlinked into ~/.zsh_functions).
+  local self="${functions_source[sync-kiro-permissions]}"
+  if [[ -z "$self" ]]; then
+    echo "sync-kiro-permissions: could not locate own source file." >&2
+    return 1
+  fi
+
+  # Follow the symlink to the real file inside the dotfiles repo, then walk
+  # up: functions/ -> zsh/ -> config/ -> <dotfiles root>.
+  local real_self dotfiles_root
+  real_self="$(readlink -f "$self" 2>/dev/null || realpath "$self")"
+  dotfiles_root="${real_self:h:h:h:h}"
+
+  local repo_file="$dotfiles_root/config/kiro/permissions.yaml"
+
+  if [[ ! -f "$live_file" ]]; then
+    echo "sync-kiro-permissions: no live permissions file at $live_file" >&2
+    return 1
+  fi
+
+  if [[ ! -d "$dotfiles_root/config/kiro" ]]; then
+    echo "sync-kiro-permissions: dotfiles kiro dir not found (resolved root: $dotfiles_root)" >&2
+    return 1
+  fi
+
+  cp "$live_file" "$repo_file"
+  echo "Synced Kiro permissions:"
+  echo "  from: $live_file"
+  echo "  to:   $repo_file"
+}

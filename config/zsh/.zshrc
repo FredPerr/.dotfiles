@@ -69,4 +69,4 @@ autoload -Uz add-zsh-hook
 add-zsh-hook chpwd set_tmux_title
 set_tmux_title
 
-autoload -Uz create-workspace remove-workspace open-workspace
+autoload -Uz create-workspace remove-workspace open-workspace sync-kiro-permissions

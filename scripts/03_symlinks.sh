@@ -22,6 +22,22 @@ symlink() {
   success "Linked $dest → $src"
 }
 
+# Copy instead of symlink, for files the target app must own and write to
+# (e.g. Kiro rewrites permissions.yaml when you approve commands).
+copy() {
+  local src="$1"
+  local dest="$2"
+
+  if [[ ! -e "$src" ]]; then
+    error "Source not found: $src — skipping."
+    return
+  fi
+
+  mkdir -p "$(dirname "$dest")"
+  cp "$src" "$dest"
+  success "Copied $dest ← $src"
+}
+
 info "Creating symlinks..."
 
 # --- Terminal -----------------------------------------------------------
@@ -55,6 +71,7 @@ symlink "$CONFIG_DIR/kiro/settings.json" "$KIRO_DEST_DIR/settings.json"
 symlink "$CONFIG_DIR/kiro/keybindings.json" "$KIRO_DEST_DIR/keybindings.json"
 symlink "$CONFIG_DIR/kiro/steering" "$HOME/.kiro/steering"
 symlink "$CONFIG_DIR/kiro/agents" "$HOME/.kiro/agents"
+copy "$CONFIG_DIR/kiro/permissions.yaml" "$HOME/.kiro/settings/permissions.yaml"
 
 # --- Tmux ---------------------------------------------------------------
 symlink "$CONFIG_DIR/tmux" "$HOME/.config/tmux"

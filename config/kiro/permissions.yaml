@@ -1,0 +1,52 @@
+rules:
+  - capability: shell
+    match:
+      - go mod *
+      - go run *
+      - rm -rf cmd
+      - go build *
+      - pdftotext *
+      - sqlite3 *
+      - ./fin *
+      - pnpm payload:generate:importMap *
+      - pnpm lint *
+      - pnpm lint:fix *
+      - pnpm build *
+      - ls *
+      - npm install
+      - npx tsc --noEmit scripts/generate-icons.ts
+      - npx tsc --noEmit --project tsconfig.json
+      - node --loader ts-node/esm scripts/generate-icons.ts
+      - head -20 assets/icons/aws-architecture-group-icons-04302026.json
+      - typst *
+      - echo *
+      - rm *
+      - grep *
+      - cargo *
+      - cd *
+      - npx *
+      - cat *
+      - head *
+      - find *
+      - rustfmt *
+      - lsof *
+      - curl *
+      - which *
+      - kiro-cli *
+      - timeout *
+      - pnpm exec *
+      - tail *
+      - pnpm tsc *
+      - pnpm biome *
+      - true *
+    effect: allow
+  - capability: web_search
+    effect: allow
+  - capability: web_fetch
+    effect: allow
+    match:
+      - www.cnesst.gouv.qc.ca
+      - gist.github.com
+      - blog.brianbeach.com
+      - www.daytona.io
+      - support.atlassian.com
