@@ -57,11 +57,7 @@
   },
   "go.toolsManagement.autoUpdate": true,
   "diffEditor.renderSideBySide": false,
-<<<<<<< Updated upstream
   "kiroAgent.trust.defaultScope": "session",
-=======
-  "kiroAgent.trust.defaultScope": "workspace",
->>>>>>> Stashed changes
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.panel.showLabels": false,
   "[typescript]": {
@@ -132,24 +128,19 @@
     "https://www.schemastore.org/": true,
     "https://json.schemastore.org/": true,
     "https://json-schema.org/": true,
-<<<<<<< Updated upstream
-    "https://biomejs.dev": true
+    "https://biomejs.dev": true,
+    "https://schema.tauri.app/config/2": true
   },
   "atlascode.jira.enabled": false,
   "editor.codeActions.triggerOnFocusChange": true,
   "workbench.activityBar.location": "top",
   "window.commandCenter": false,
   "explorer.confirmDelete": false,
-  "window.zoomLevel": -1,
+  "window.zoomLevel": 0.5,
   "workbench.colorCustomizations": {
     "editorOverviewRuler.border": false
   },
   "editor.overviewRulerBorder": false,
   "editor.scrollbar.vertical": "auto",
   "editor.scrollbar.horizontal": "hidden"
-=======
-    "https://biomejs.dev": true,
-    "https://schema.tauri.app/config/2": true
-  }
->>>>>>> Stashed changes
 }
