@@ -75,7 +75,22 @@
   "atlascode.jira.explorer.enabled": false,
   "atlascode.jira.hover.enabled": false,
   "atlascode.jira.todoIssues.enabled": false,
-  "yaml.disableSchemaDetection": [],
+  "yaml.disableSchemaDetection": [
+    "**/docker-compose.yml",
+    "**/docker-compose.yaml",
+    "**/docker-compose.*.yml",
+    "**/docker-compose.*.yaml",
+    "**/compose.yml",
+    "**/compose.yaml",
+    "**/compose.*.yml",
+    "**/compose.*.yaml",
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ],
   "javascript.updateImportsOnFileMove.enabled": "always",
   "[typescriptreact]": {
     "editor.defaultFormatter": "biomejs.biome"
@@ -126,5 +141,6 @@
   },
   "editor.overviewRulerBorder": false,
   "editor.scrollbar.vertical": "auto",
-  "editor.scrollbar.horizontal": "hidden"
+  "editor.scrollbar.horizontal": "hidden",
+  "mise.binPath": "/Users/fredperr/.local/bin/mise"
 }
