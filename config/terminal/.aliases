@@ -1,2 +1,3 @@
 alias a="assume"
 alias ac="assume -c"
+alias aws-local='AWS_ACCESS_KEY_ID=test AWS_SECRET_ACCESS_KEY=test aws --endpoint-url http://localhost:4566 --region us-east-2'
