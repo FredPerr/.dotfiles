@@ -57,7 +57,7 @@
   },
   "go.toolsManagement.autoUpdate": true,
   "diffEditor.renderSideBySide": false,
-  "kiroAgent.trust.defaultScope": "session",
+  "kiroAgent.trust.defaultScope": "user",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.panel.showLabels": false,
   "[typescript]": {
@@ -132,7 +132,6 @@
     "https://schema.tauri.app/config/2": true
   },
   "atlascode.jira.enabled": false,
-  "editor.codeActions.triggerOnFocusChange": true,
   "workbench.activityBar.location": "top",
   "window.commandCenter": false,
   "explorer.confirmDelete": false,
@@ -142,5 +141,9 @@
   },
   "editor.overviewRulerBorder": false,
   "editor.scrollbar.vertical": "auto",
-  "editor.scrollbar.horizontal": "hidden"
+  "editor.scrollbar.horizontal": "hidden",
+  "mise.binPath": "/Users/fredperr/.local/bin/mise",
+  "docker.extension.enableComposeLanguageServer": false,
+  "editor.codeActions.triggerOnFocusChange": true,
+  "kiroAgent.workflows.enabled": false
 }

@@ -3,6 +3,7 @@ tap "nikitabobko/tap"
 
 # Command-line Tools & Runtimes
 brew "git"
+brew "git-lfs"
 brew "neovim"
 brew "python"
 brew "node"
