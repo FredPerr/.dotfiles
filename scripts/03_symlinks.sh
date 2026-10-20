@@ -72,6 +72,7 @@ symlink "$CONFIG_DIR/kiro/settings.json" "$KIRO_DEST_DIR/settings.json"
 symlink "$CONFIG_DIR/kiro/keybindings.json" "$KIRO_DEST_DIR/keybindings.json"
 symlink "$CONFIG_DIR/kiro/steering" "$HOME/.kiro/steering"
 symlink "$CONFIG_DIR/kiro/agents" "$HOME/.kiro/agents"
+symlink "$CONFIG_DIR/kiro/skills" "$HOME/.kiro/skills"
 copy "$CONFIG_DIR/kiro/permissions.yaml" "$HOME/.kiro/settings/permissions.yaml"
 
 # --- Tmux ---------------------------------------------------------------
