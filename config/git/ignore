@@ -1,0 +1,8 @@
+# Global git ignore (core.excludesFile) — applies to all repos on this machine.
+
+# Agent workflow directories
+.worktrees/
+.agents/
+
+# macOS
+.DS_Store

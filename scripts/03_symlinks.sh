@@ -51,6 +51,7 @@ symlink "$CONFIG_DIR/ssh/config" "$HOME/.ssh/config"
 
 # --- Git ----------------------------------------------------------------
 symlink "$CONFIG_DIR/git/.gitconfig" "$HOME/.gitconfig"
+symlink "$CONFIG_DIR/git/ignore" "$HOME/.config/git/ignore"
 
 # --- Alacritty ----------------------------------------------------------
 symlink "$CONFIG_DIR/alacritty/alacritty.toml" "$HOME/.config/alacritty/alacritty.toml"

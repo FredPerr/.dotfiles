@@ -76,14 +76,6 @@
   "atlascode.jira.hover.enabled": false,
   "atlascode.jira.todoIssues.enabled": false,
   "yaml.disableSchemaDetection": [
-    "**/docker-compose.yml",
-    "**/docker-compose.yaml",
-    "**/docker-compose.*.yml",
-    "**/docker-compose.*.yaml",
-    "**/compose.yml",
-    "**/compose.yaml",
-    "**/compose.*.yml",
-    "**/compose.*.yaml",
     "**/.github/workflows/*.yml",
     "**/.github/workflows/*.yaml",
     "**/.gitea/workflows/*.yml",
@@ -135,7 +127,7 @@
   "workbench.activityBar.location": "top",
   "window.commandCenter": false,
   "explorer.confirmDelete": false,
-  "window.zoomLevel": 0.5,
+  "window.zoomLevel": 0.8,
   "workbench.colorCustomizations": {
     "editorOverviewRuler.border": false
   },
@@ -143,7 +135,9 @@
   "editor.scrollbar.vertical": "auto",
   "editor.scrollbar.horizontal": "hidden",
   "mise.binPath": "/Users/fredperr/.local/bin/mise",
-  "docker.extension.enableComposeLanguageServer": false,
   "editor.codeActions.triggerOnFocusChange": true,
-  "kiroAgent.workflows.enabled": false
+  "kiroAgent.workflows.enabled": false,
+  "docker.extension.enableComposeLanguageServer": false,
+  "kiroAgent.notifications.agent.success": true,
+  "workbench.colorTheme": "Monokai"
 }
